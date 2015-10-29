@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<description>f10301006 Context</description>
+	
+	<bean id="saveAuditVerdictAction"
+		  class="com.wondersgroup.local.k3.f10301006.action.SaveAuditVerdictAction"
+		  singleton="false">
+		  <description>稽核结论登记</description>
+		  <property name="f10301006VS" ref="f10301006VS"></property>
+	</bean>
+	
+	<bean id="queryCaseConclusionAction"
+		  class="com.wondersgroup.local.k3.f10301006.action.QueryCaseConclusionAction"
+		  singleton="false">
+		  <description>稽核结论登记案件查询</description>
+		  <property name="f10301006VS" ref="f10301006VS"></property>
+	</bean>
+	
+	<bean id="saveNotifyAction" class="com.wondersgroup.local.k3.f10301006.action.SaveNotify" singleton="false">
+		<description>稽核对象告知</description>
+		  <property name="f10301006VS" ref="f10301006VS"></property>
+	</bean>
+	
+	 <bean id="f10301006VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301006.vs.impl.F10301006VSImpl">
+				<property name="adminDisposalBS" ref="adminDisposalBS"></property>
+				<property name="f10301006BS" ref="f10301006BS"></property>
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

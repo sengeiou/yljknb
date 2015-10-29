@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="/k4/f10402007" location="0,0" size="0,0">
+    <action name="addDxzb" location="0,0" size="0,0" />
+    <action name="queryMldx" location="0,0" size="0,0" />
+    <action name="queryDxzbMessage" location="0,0" size="0,0" />
+    <action name="updataDxzbMessage" location="0,0" size="0,0" />
+    <action name="loadRuleDxzbMessage" location="0,0" size="0,0" />
+    <action name="deleteDxzbMessage" location="0,0" size="0,0" />
+    <action name="queryCaseNumberDxzb" location="0,0" size="0,0" />
+    <action name="queryGzzbByGzmsId" location="0,0" size="0,0" />
+    <action name="ruleDxzbData" location="0,0" size="0,0" />
+    <action name="downLoad" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="uploadDxzb" location="0,0" size="0,0" />
+    <action name="querySuccDxzbInfo" location="0,0" size="0,0" />
+    <action name="queryFailDxzbInfo" location="0,0" size="0,0" />
+  </package>
+</Struts2Diagram>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k4/f10402001" extends="shyb-default" namespace="/k4/f10402001">
+		<!-- 分页查询规则模板 -->
+		<action name="queryModelManage" class="queryModelManageAction"/>
+		
+		<!-- 加载单个规则模板 -->
+		<action name="loadModel" class="loadModelManageAction"/>
+		
+		<!-- 分页查询规则 -->
+		<action name="queryRule" class="queryRuleAction"/>
+		
+		<!-- 分页查询方案 -->
+		<action name="queryScheme" class="querySchemeAction"/>
+		
+		<!-- 保存规则模板 -->
+		<action name="saveModel" class="saveModelAction"/>
+		
+		<!-- 加载数据(登陆用户,当前时间) -->
+		<action name="loadModelInitData" class="loadModelInitDataAction"/>
+		
+		<!-- 更新模板 -->
+		<action name="updateModelManage" class="updateModelManageAction"/>
+		
+		<!-- 启用Ka43 -->
+		<action name="updateModelManageAae100" class="updateModelManageAae100Action"/>
+		
+	</package>		  
+</struts>

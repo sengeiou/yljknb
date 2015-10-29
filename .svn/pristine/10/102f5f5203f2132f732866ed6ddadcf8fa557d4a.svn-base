@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>common Context</description>
+
+	<bean id="queryGzSummaryAction" class="com.wondersgroup.local.common.action.QueryGzSummaryAction"
+		scope="prototype">
+		<description>查询医师对象信息</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+	<bean id="queryDoctorAction" class="com.wondersgroup.local.common.action.QueryDoctorAction"
+		scope="prototype">
+		<description>查询医师对象信息</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+
+	<bean id="queryInsuPersonAction"
+		class="com.wondersgroup.local.common.action.QueryInsuPersonAction"
+		scope="prototype">
+		<description>查询参保对象信息</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+
+	<bean id="queryMedInstitutionAction"
+		class="com.wondersgroup.local.common.action.QueryMedInstitutionAction"
+		scope="prototype">
+		<description>查询医疗机构对象信息</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+
+	<bean id="queryAuditCaseAction"
+		class="com.wondersgroup.local.common.action.QueryAuditCaseAction"
+		scope="prototype">
+		<description>查询稽核案件信息</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+
+	<bean id="queryBeAuditTargetAction"
+		class="com.wondersgroup.local.common.action.QueryBeAuditTargetAction"
+		scope="prototype">
+		<description>查询被稽核对象</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+
+	<bean id="querySurveyRecordAction"
+		class="com.wondersgroup.local.common.action.QuerySurveyRecordAction"
+		scope="prototype">
+		<description>查询调查记录</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+
+	
+	<bean id="querySickLeverAction"
+		class="com.wondersgroup.local.common.action.QuerySickLeverAction"
+		scope="prototype">
+		<description>查询疾病种类</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+	
+	<bean id="queryDiseaseAction"
+		class="com.wondersgroup.local.common.action.QueryDiseaseAction"
+		scope="prototype">
+		<description>查询疾病种类</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+	
+
+
+	<bean id="excelExportAction" class="com.wondersgroup.local.common.action.ExcelExportAction"
+		scope="prototype">
+		<description>excel数据导出</description>
+		<property name="excelExportVS" ref="excelExportVS"></property>
+	</bean>
+	
+	<bean id="queryHistoryAction" class="com.wondersgroup.local.common.action.QueryHistorySJZAction"
+		scope="prototype">
+		<description>审核历史查询</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+	<bean id="queryHistoryDBZAction" class="com.wondersgroup.local.common.action.QueryHistorySJZDBZAction"
+		scope="prototype">
+		<description>审核历史查询</description>
+		<property name="commonVS" ref="commonVS"></property>
+	</bean>
+	
+	
+
+
+
+	<bean id="commonVS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.common.vs.impl.CommonVSImpl">
+				<property name="adminDisposalBS" ref="adminDisposalBS"></property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="excelExportVS" class="com.wondersgroup.local.common.vs.impl.ExcelExportVSImpl"
+		scope="prototype">
+	</bean>
+
+</beans>

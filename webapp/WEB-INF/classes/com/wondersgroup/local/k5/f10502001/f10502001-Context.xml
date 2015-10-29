@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10502001 Context</description>
+	
+	<bean id="queryKb41MessageAction"
+		class="com.wondersgroup.local.k5.f10502001.action.QueryKb41MessageAction"
+		scope="prototype">
+	<description>查询kb41</description>
+		<property name="f10502001VS" ref="f10502001VS"></property>
+	</bean>
+	
+	 <bean id="saveHospMessageAction"
+		class="com.wondersgroup.local.k5.f10502001.action.SaveHospMessageAction"
+		scope="prototype">
+	<description>保存kb41</description>
+		<property name="f10502001VS" ref="f10502001VS"></property>
+	</bean> 
+
+	<bean id="loadHospMessageAction"
+		class="com.wondersgroup.local.k5.f10502001.action.LoadHospMessageAction"
+		scope="prototype">
+	<description>返回修该kb41数据</description>
+		<property name="f10502001VS" ref="f10502001VS"></property>
+	</bean>	
+
+	<bean id="f10502001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10502001.vs.impl.F10502001VSImpl">
+				<property name="auditComplaintBS" ref="auditComplaintBS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/report/yishi" extends="shyb-default" namespace="/report/yishi">
+
+		<action name="index" class="linkAction">
+			<result name="success">/pages/report/yishi.jsp</result>
+		</action>
+		<!-- 医师信息 -->
+		<action name="yishiinfo" class="yishiAction" method="yishiinfo" />
+		<!-- 医师就诊次数排名 -->
+		<action name="getFrequencyTop10Data" class="yishiAction" method="getFrequencyTop10Data" />
+		<!-- 医师医保内费用总额排名-->
+		<action name="getFeeTop10Data" class="yishiAction" method="getFeeTop10Data" />
+	    <!-- 费用明细查询 -->
+		<action name="queryFymxGrid" class="yishiAction" method="queryFymxGrid" />
+	     <!-- 历史违规查询 -->
+		<action name="queryLswgGrid" class="yishiAction" method="queryLswgGrid" />
+		 <!-- 历史违规查询 -->
+		<action name="queryYdxxGrid" class="yishiAction" method="queryYdxxGrid" />
+		<!-- 费用项目构成 饼图 -->
+		<action name="getFeeItemsConstituentData" class="yishiAction" method="getFeeItemsConstituentData" />
+		<!-- 资金来源构成 饼图 -->
+		<action name="getFundSourceConsituentData" class="yishiAction" method="getFundSourceConsituentData" />
+		<!-- 工作量统计 条形图 -->
+		<action name="getWorkloadStatisticsData" class="yishiAction" method="getWorkloadStatisticsData" />
+		<!-- 工作量统计 条形图 -->
+		<action name="getFeeStatisticsData" class="yishiAction" method="getFeeStatisticsData" />
+		<!-- 时间轴 -->
+		<action name="yishisjz" class="yishiAction" method="yishisjz" />
+	</package>
+</struts>

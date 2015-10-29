@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10506001 Context</description>
+    
+   	<bean id="f10506001QueryAction"
+		  class="com.wondersgroup.local.k5.f10506001.action.F10506001QueryAction"
+		  scope="prototype">
+		  <description>复议处理</description>
+		  <property name="f10506001VS" ref="f10506001VS"></property>
+	</bean>
+	
+	<bean id="uploadFileAction"
+		class="com.wondersgroup.local.k5.f10506001.action.UploadFileAction"
+		scope="prototype">
+		<description>上传附件信息</description>
+		<property name="f10506001VS" ref="f10506001VS"></property>
+	</bean>
+	
+	<bean id="queryHosAction"
+		class="com.wondersgroup.local.k5.f10506001.action.QueryHosAction"
+		scope="prototype">
+		<description>查询医院信息</description>
+		<property name="f10506001VS" ref="f10506001VS"></property>
+	</bean>
+	<bean id="f06exportExcelAction"
+		class="com.wondersgroup.local.k5.f10506001.action.ExportExcelAction"
+		scope="prototype">
+		<description>导出ExcelAction</description>
+		<property name="f10506001VS" ref="f10506001VS"></property>
+	</bean>
+	<bean id="f10506001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10506001.vs.impl.F10506001VSImpl">
+				<property name="f10506001BS" ref="f10506001BS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

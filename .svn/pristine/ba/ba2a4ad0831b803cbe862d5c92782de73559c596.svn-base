@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10202002 Context</description>
+
+	<bean id="f10202003Action"
+		class="com.wondersgroup.local.k2.f10202003.action.F10202003Action"
+		scope="prototype">
+		<description>综合查询-审核查询</description>
+		<property name="f10202003VS" ref="f10202003VS"></property>
+	</bean>
+
+
+	<bean id="f10202003VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k2.f10202003.vs.impl.F10202003VSImpl">
+				<property name="f10202003BS" ref="f10202003BS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

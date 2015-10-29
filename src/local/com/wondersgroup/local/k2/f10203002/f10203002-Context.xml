@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10203002 Context</description>
+	
+	<bean id="f10203002Action"
+		class="com.wondersgroup.local.k2.f10203002.action.F10203002Action"
+		scope="prototype">
+		 <description>申诉审核处理查询</description>
+		<property name="f10203002VS" ref="f10203002VS"></property>
+	</bean>
+	
+	<bean id="susDocuDetailOperateAction" class="com.wondersgroup.local.k2.f10203002.action.SusDocuDetailOperateAction" scope="prototype">
+		 <description>申诉审核处理操作</description>
+		<property name="f10203002VS" ref="f10203002VS"></property>
+	</bean>
+	
+	<bean id="f10203002VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k2.f10203002.vs.impl.F10203002VSImpl">
+				<property name="f10203002BS" ref="f10203002BS"></property>
+			</bean>
+		</property>
+	</bean>
+	
+
+</beans>

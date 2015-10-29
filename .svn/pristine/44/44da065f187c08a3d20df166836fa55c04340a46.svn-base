@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10605002 Context</description>
+	<bean id="queryDocOfDrug" class="com.wondersgroup.local.k6.f10605002.action.QueryDocOfDrug">
+		<property name="f10605002VS" ref="f10605002VS"></property>
+	</bean>
+	<bean id="queryDrugByHos" class="com.wondersgroup.local.k6.f10605002.action.QueryDrugByHos">
+		<property name="f10605002VS" ref="f10605002VS"></property>
+	</bean>
+	<bean id="queryDocOfHos" class="com.wondersgroup.local.k6.f10605002.action.QueryDocOfHos">
+		<property name="f10605002VS" ref="f10605002VS"></property>
+	</bean>
+	<bean id="queryHosByDrug" class="com.wondersgroup.local.k6.f10605002.action.QueryHosByDrug">
+		<property name="f10605002VS" ref="f10605002VS"></property>
+	</bean>
+	<bean id="f10605002VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k6.f10605002.vs.impl.F10605002VSimpl">
+				<property name="f10605002BS" ref="f10605002BS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

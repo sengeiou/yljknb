@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>一体化本地化 应用资源配置</description>
+	<import resource="classpath:com/wondersgroup/wssip/application/wssipAppContext.xml" />
+
+	<bean id="loginAction" class="com.wondersgroup.wssip.local.application.login.LoginAction" parent="abstractLoginAction">
+		<description>本地化登录Action实现</description>
+	</bean>
+
+	<bean id="workspaceAction" class="com.wondersgroup.wssip.local.application.workspace.WorkspaceAction" parent="abstractWorkspaceAction" >
+		<description>本地化工作区Action实现</description>
+		<!--<property name="menuService" ref="menuService"></property>-->
+	</bean>
+</beans>

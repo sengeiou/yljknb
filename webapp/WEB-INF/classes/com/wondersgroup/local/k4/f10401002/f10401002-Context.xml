@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10401002 Context</description>
+    
+  	 <bean id="queryDispatchManageAction"
+		class="com.wondersgroup.local.k4.f10401002.action.QueryDispatchManageAction"
+		scope="prototype">
+		<description>调度计划信息分页查询</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean> 
+		
+	<bean id="addDispatchManageAction"
+		class="com.wondersgroup.local.k4.f10401002.action.AddDispatchManageAction"
+		scope="prototype">
+		<description>添加调度计划</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean>
+	
+	<bean id="updateDispatchManageAction"
+		class="com.wondersgroup.local.k4.f10401002.action.UpdateDispatchManageAction"
+		scope="prototype">
+		<description>修改调度计划</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean>
+	
+	<bean id="loadDispatchManageAction"
+		class="com.wondersgroup.local.k4.f10401002.action.LoadDispatchManageAction"
+		scope="prototype">
+		<description>加载修改调度计划</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+		
+	</bean>
+		<bean id="addRuleTaskAction"
+		class="com.wondersgroup.local.k4.f10401002.action.AddRuleTaskAction"
+		scope="prototype">
+		<description>规则任务添加</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+		
+	</bean>
+		<bean id="queryRuleTaskAction"
+		class="com.wondersgroup.local.k4.f10401002.action.QueryRuleAction"
+		scope="prototype">
+		<description>新添加规则信息查询</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean>
+	
+	<bean id="deleteRuleTaskAction"
+		class="com.wondersgroup.local.k4.f10401002.action.DeleteRuleTaskAction"
+		scope="prototype">
+		<description>删除添加规则信息</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean>
+	
+	<bean id="checkTaskAction"
+		class="com.wondersgroup.local.k4.f10401002.action.CheckManageAction"
+		scope="prototype">
+		<description>判断任务类型</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean>
+	
+	<bean id="queryAnalyzeAction"
+		class="com.wondersgroup.local.k4.f10401002.action.QueryAnalyzeAction"
+		scope="prototype">
+		<description>查询分析主题</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean>
+	
+	
+	<bean id="addAnalyzeAction"
+		class="com.wondersgroup.local.k4.f10401002.action.AddAnalyzeAction"
+		scope="prototype">
+		<description>添加分析主题信息</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean>
+	
+	<bean id="deleteAnalyzeAction"
+		class="com.wondersgroup.local.k4.f10401002.action.DeleteAnalyzeTaskAction"
+		scope="prototype">
+		<description>删除分析主题信息</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean>
+	
+	<bean id="setPriorityAction"
+		class="com.wondersgroup.local.k4.f10401002.action.SetPriorityAction"
+		scope="prototype">
+		<description>设置优先级</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean>
+	
+	<bean id="startDispatchManageAction"
+		class="com.wondersgroup.local.k4.f10401002.action.StartDispatchManageAction"
+		scope="prototype">
+		<description>启动调度计划</description>
+		<property name="f10401002VS" ref="f10401002VS"></property>
+	</bean>
+	
+	<bean id="initDispatchDataAction"
+		class="com.wondersgroup.local.k4.f10401002.action.InitDispatchDataAction"
+		scope="prototype">
+		<description>加载数据</description>
+	</bean>
+	
+	<bean id="f10401002VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10401002.vs.impl.F10401002VSImpl">
+				<property name="planManageBS" ref="planManageBS"></property>
+			</bean>
+		</property>
+	</bean>
+		
+	
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10402001 Context</description>
+	 <bean id="F10402008Action"
+		class="com.wondersgroup.local.k4.f10402008.action.F10402008Action"
+		scope="prototype">
+		<property name="f10402008VS" ref="f10402008VS"></property>
+	</bean>
+	 
+	 <bean id="f10402008Action"
+		class="com.wondersgroup.local.k4.f10402008.action.F10402008Action"
+		scope="prototype">
+		<property name="f10402008VS" ref="f10402008VS"></property>
+	</bean>
+	 
+	<bean id="f10402008VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10402008.vs.impl.F10402008VSImpl">
+				<property name="ruleManageBS" ref="ruleManageBS"></property>
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

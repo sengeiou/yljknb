@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<description>f10301007 Context</description>
+	
+	<bean id="queryWaitAffirmAction"
+		  class="com.wondersgroup.local.k3.f10301007.action.QueryWaitAffirmAction"
+		  singleton="false">
+		  <description>稽核结论确认查询</description>
+		  <property name="f10301007VS" ref="f10301007VS"></property>
+	</bean>
+	
+	<bean id="surveyReviewAction"
+		  class="com.wondersgroup.local.k3.f10301007.action.SurveyReviewAction"
+		  singleton="false">
+		  <description>调查重审</description>
+		  <property name="f10301007VS" ref="f10301007VS"></property>
+	</bean>
+	
+	<bean id="confirmPassAction"
+		  class="com.wondersgroup.local.k3.f10301007.action.ConfirmPassAction"
+		  singleton="false">
+		  <description>确认通过</description>
+		  <property name="f10301007VS" ref="f10301007VS"></property>
+	</bean>
+	
+	<bean id="f10301007VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301007.vs.impl.F10301007VSImpl">
+				<property name="adminDisposalBS" ref="adminDisposalBS"></property>
+				<property name="f10301007BS" ref="f10301007BS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

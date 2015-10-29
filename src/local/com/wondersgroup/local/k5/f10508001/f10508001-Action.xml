@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k2/f10508001"  extends="shyb-default" namespace="/k5/f10508001">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k5/f10508001/f10508001.jsp</result>
+	   </action>
+	   <action name="queryMedDocument" class="f10508001Action" method="queryMedDocument"></action>
+	   <action name="queryMedDocumentDetail" class="f10508001Action" method="queryMedDocumentDetail"></action>
+	   <action name="f08exportExcel" class="f08exportExcelAction" />
+	</package>
+</struts>

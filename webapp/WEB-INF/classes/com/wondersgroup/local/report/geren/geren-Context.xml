@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>geren Context</description>
+    
+   	<bean id="gerenAction"
+		  class="com.wondersgroup.local.report.geren.action.GerenAction"
+		  scope="prototype">
+		  <description>参保人分析报告</description>
+		  <property name="gerenVS" ref="gerenVS"></property>
+	</bean>
+	
+	<bean id="gerenVS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.report.geren.vs.impl.GerenVSImpl">
+				<property name="reportBS" ref="reportBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

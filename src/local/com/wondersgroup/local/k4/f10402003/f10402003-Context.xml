@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10402003 Context</description>
+	
+	<bean id="queryAnalysisRuleAction"
+		class="com.wondersgroup.local.k4.f10402003.action.QueryAnalysisRuleAction"
+		scope="prototype">
+		<description>分页查询分析规则</description>
+		<property name="f10402003VS" ref="f10402003VS"></property>
+	</bean>
+	
+	<bean id="initAnalysisRuleAction"
+		class="com.wondersgroup.local.k4.f10402003.action.InitAnalysisRuleAction"
+		scope="prototype">
+		<description>打开添加页面初始化规则数据</description>
+	</bean>
+	
+	<bean id="updateAnalysisRuleAae043Action"
+		class="com.wondersgroup.local.k4.f10402003.action.UpdateAnalysisRuleAae043Action"
+		scope="prototype">
+		<description>更新分析规则规则期别</description>
+		<property name="f10402003VS" ref="f10402003VS"></property>
+	</bean>
+	
+	<bean id="updateAnalysisRuleAae100Action"
+		class="com.wondersgroup.local.k4.f10402003.action.UpdateAnalysisRuleAae100Action"
+		scope="prototype">
+		<description>更新启用或禁用</description>
+		<property name="f10402003VS" ref="f10402003VS"></property>
+	</bean>
+	
+	<bean id="updateAnalysisRuleAction"
+		class="com.wondersgroup.local.k4.f10402003.action.UpdateAnalysisRuleAction"
+		scope="prototype">
+		<description>更新分析析规则</description>
+		<property name="f10402003VS" ref="f10402003VS"></property>
+	</bean>
+	
+	<bean id="loadAnalysisRuleAction"
+		class="com.wondersgroup.local.k4.f10402003.action.LoadAnalysisRuleAction"
+		scope="prototype">
+		<description>加载单个分析规则</description>
+		<property name="f10402003VS" ref="f10402003VS"></property>
+	</bean>
+	
+	<bean id="saveAnalysisRuleAction"
+		class="com.wondersgroup.local.k4.f10402003.action.SaveAnalysisRuleAction"
+		scope="prototype">
+		<description>保存分析规则</description>
+		<property name="f10402003VS" ref="f10402003VS"></property>
+	</bean>
+	<bean id="f10402003VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10402003.vs.impl.F10402003VSImpl">
+				<property name="ruleManageBS" ref="ruleManageBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

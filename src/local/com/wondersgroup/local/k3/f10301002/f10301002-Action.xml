@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k3/f10301002"  extends="shyb-default" namespace="/k3/f10301002">
+		
+		<!-- 查询稽核立案登记列表 -->
+		<action name="queryAuditFile" class="queryAuditFileAction" />
+		
+		<!-- 保存稽核案件信息 -->
+		<action name="auditFile" class="auditFileAction" method="lordAuditFile"/>
+		
+		<!-- 加载核立案登记明细 -->
+		<action name="saveAuditFile" class="auditFileAction" method="saveAuditFile"/>
+		
+		<!-- 关闭疑点问题 -->
+		<action name="closeQuestion" class="auditFileAction" method="closeQuestion"/>
+		
+		<!-- 查询立案登记 -->
+		<action name="findAuditFile" class="auditFileAction" />
+		
+		<!-- 查询参保人员 -->
+		<action name="queryPerson" class="auditFileAction" method="queryPerson"/>
+		
+		<!-- 查询医护人员 -->
+		<action name="queryDoctor" class="auditFileAction" method="queryDoctor"/>
+		
+		<!-- 查询医疗机构 -->
+		<action name="queryOrganize" class="auditFileAction" method="queryOrganize"/>
+		
+		<!-- 删除案件信息 -->
+		<action name="deleteCase" class="auditFileAction" method="deleteCase"/>
+		
+		<!-- 简化版 立案 -->
+		<action name="auditRegister" class="auditRegisterAction" method=""/>
+	
+	</package>
+</struts>

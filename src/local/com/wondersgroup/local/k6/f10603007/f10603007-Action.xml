@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k6/f10603007" extends="shyb-default" namespace="/k6/f10603007">
+		 <action name="index" class="linkAction">
+			<result name="success">/pages/k6/f10603007/f10603007.jsp</result>
+	    </action>
+	    
+	    <!-- 通过存过生产数据 -->
+	    <action name="buildData" class="mediPartFeeTrendAction" method="buildData"/>
+	    <!-- 并查询表格 -->
+	    <action name="viewTrend" class="mediPartFeeTrendAction" method="viewTrend"/>
+	    <!-- 查询图表数据 -->
+	    <action name="queryMoveAverage" class="mediPartFeeTrendAction" method="queryMoveAverage"/>
+	    
+	</package>
+</struts>

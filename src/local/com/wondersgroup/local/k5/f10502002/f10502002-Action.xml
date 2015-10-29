@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<package name="/k5/f10502002" extends="shyb-default" namespace="/k5/f10502002">
+		<action name="index" class="linkAction">
+			<result name="success">/pages/k5/f10502002/f10502002.jsp</result>
+	   </action>
+	    <!-- 查询kf66-->
+     <action name="queryKf66Message" class="queryKf66MessageAction"></action>
+ 		<!-- 查询kf06-->
+     <action name="queryKf06Message" class="queryKf66MessageAction"  method="queryKf06Message"></action>
+     	<!-- 新增信息-->
+     <action name="saveKf66Message" class="saveKf66MessageAction"></action>
+       <!-- 根据aaz107  跳转到新增科室-->
+     <action name="loadAddkf66Message" class="loadUpdatekf66MessageAction" method="loadAddkf66Message"></action>
+       <!-- 根据baz047  返回修改数据-->
+     <action name="loadUpdatekf66Message" class="loadUpdatekf66MessageAction"></action>
+      <!-- 修改保存-->
+     <action name="updateKf66Message" class="updateKf66MessageAction"></action>
+      <!-- 删除信息 -->
+     <action name="deleteKf06Message" class="updateKf66MessageAction" method="deleteKf06Message"></action>
+</package>				
+  
+</struts>

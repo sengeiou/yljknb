@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k4/f10402004" extends="shyb-default" namespace="/k4/f10402004">
+	
+		<!-- 分页查询监控类型 -->
+		<action name="queryRuleAaa153" class="queryRuleAaa153Action"/>
+		
+		<!-- 分页查询规则 -->
+		<action name="queryRuleByAaa153" class="queryRuleByAaa153Action"/>
+		
+		<!-- 保存阈值 -->
+		<action name="saveThreshold" class="saveThresholdAction"/>
+		
+		<!-- 分页查询阈值 -->
+		<action name="queryThreshold" class="queryThresholdAction"/>
+		
+		<!-- 删除阈值 -->
+		<action name="deleteThreshold" class="deleteThresholdAction"/>
+		
+		<!-- 加载单个阈值 -->
+		<action name="loadThreshold" class="loadThresholdAction"/>
+		
+		<!-- 修改阈值 -->
+		<action name="updateThreshold" class="updateThresholdAction"/>
+	</package>		  
+</struts>

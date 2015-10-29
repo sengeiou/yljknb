@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k2/f10202003"  extends="shyb-default" namespace="/k2/f10202003">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k2/f10202003/f10202003.jsp</result>
+	   </action>
+	   <action name="queryMedDocument" class="f10202003Action" method="queryMedDocument"></action>
+	   <action name="queryMedDocumentDetail" class="f10202003Action" method="queryMedDocumentDetail"></action>
+	</package>
+</struts>

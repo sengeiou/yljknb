@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+
+	<package name="/k3/f10301008" extends="shyb-default" namespace="/k3/f10301008">
+		
+		<!-- 查询案件信息 查询出已结案，但未告知终结的案件 -->
+		<action name="queryConvey" class="queryConveyAction"/>
+		
+		<!-- 根据案件编号 查询 结论审批完成的案件信息 -->
+		<action name="loadVerdictConveyByabz001" class="queryConveyAction" method="loadVerdictConveyInfoByabz001"/>
+		
+		<!-- 根据aaz318 查询被稽核对象 告知状态是  未告知 -->
+		<action name="loadBeAuditByAaz318" class="queryConveyAction" method="loadVerdictBeAuditByAaz318"/>
+		
+		<!-- 查询 案件详情 -->
+		<action name="loadVerdictCaseByAaz318" class="queryConveyAction" method="loadVerdictCaseInfoByAaz318"/>
+		
+		<!-- 保存稽核传达 记录 -->
+		<action name="saveConveyRecord" class="saveConveyRecordAction"/>
+		
+		<!-- 查询稽核传达 记录 -->
+		<action name="queryConveyRecord" class="queryConveyRecordAction"/>
+		
+		<!-- 删除稽核传达记录 -->
+		<action name="deleteConveyRecord" class="deleteConveyRecordAction"/>
+		
+		<!-- 稽核传达记录  告知终结 -->
+		<action name="notifyFinish" class="notifyFinishAction"/>
+		
+		<!-- 查询af38 -->
+		<action name="queryAf38ByAaz077" class="queryDetailsAction" method="queryAf38ByAaz077"/>
+		
+		<!-- 查询传达信息 -->
+		<action name="queryAf54Info" class="converAction" method="queryAf54Info"></action>
+		
+		<!-- 保存传达信息 -->
+		<action name="saveConver" class="converAction" method="saveConver"></action>
+		
+		<!-- 导出告知Word -->
+		<action name="exportWord_cd" class="converAction" method="exportWord_cd"> </action>	
+		
+		<!-- 案件移交 -->
+		<action name="caseMove" class="caseMoveAction" method="caseMove"></action>
+		
+		<!-- 导出移交Word -->
+		<action name="exportWord_yj" class="caseMoveAction" method="exportWord_yj"> </action>
+		
+		<!-- 保存限期修改 -->
+		<action name="saveAf62" class="changeOfTimeAction" method="saveAf62"></action>	
+		
+		<!-- 导出限期修改Word -->
+		<action name="exportWord_xqxg" class="changeOfTimeAction" method="exportWord_xqxg"></action>
+		
+		<!-- 保存恢复医疗服务保险待遇单 -->
+		<action name="saveAf63" class="recoveryAction" method="saveAf63"></action>
+		
+		<!-- 导出恢复医疗保险待遇Word -->
+		<action name="exportWord_hf" class="recoveryAction" method="exportWord_hf"></action>
+		
+		<!-- 查询送达回证信息 -->
+		<action name="queryReturnProveInfo" class="returnProveAction" method="queryReturnProveInfo"></action>
+		
+		<!-- 保存送达回证 -->
+		<action name="saveAf64" class="returnProveAction" method="saveAf64"></action>
+		
+		<!-- 导出送达回证Word -->
+		<action name="exportWord_sdhz" class="returnProveAction" method="exportWord_sdhz"></action>
+
+		<!-- 恢复查询 -->
+		<action name="loadBeAuditTargetByAaz077" class="recoveryAction" method="loadBeAuditTargetInfoByAaz077"/>
+		
+		<!-- 限期改正 -->
+		<action name="queryAf31ByAaz077" class="changeOfTimeAction" method="queryAf31ByAaz077"></action>
+	</package>
+
+</struts>

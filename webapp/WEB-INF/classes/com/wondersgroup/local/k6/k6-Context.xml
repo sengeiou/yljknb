@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>Spring Configuration</description>
+	
+	<!-- 参保人医疗费用情况 -->
+	<import resource="classpath:com/wondersgroup/local/k6/f10601001/f10601001-Context.xml"/>
+	<!-- 单病种分析 -->
+	<import resource="classpath:com/wondersgroup/local/k6/f10604001/f10604001-Context.xml"/>
+	<!-- 参保人就医发展趋势分析 -->
+	<import resource="classpath:com/wondersgroup/local/k6/f10601002/f10601002-Context.xml"/>
+	<!-- 医师费用结算情况分析 -->
+	<import resource="classpath:com/wondersgroup/local/k6/f10602001/f10602001-Context.xml"/>
+	<!-- 医师三目费用构成分析-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10602002/f10602002-Context.xml"/>
+	<!-- 医师药品使用情况分析-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10602003/f10602003-Context.xml"/>
+	<!-- 医疗服务机构三目费用构成分析-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10603001/f10603001-Context.xml"/>
+	<!-- 医疗服务机构门诊综合分析-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10603002/f10603002-Context.xml"/>
+	<!-- 医疗服务机构住院综合分析-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10603003/f10603003-Context.xml"/>
+	<!-- 医疗服务机构药品使用情况分析-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10603004/f10603004-Context.xml"/>
+	<!-- 医疗服务机构接诊人次发展趋势分析-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10603005/f10603005-Context.xml"/>
+	<!-- 医疗服务机构医疗费用发展趋势分析-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10603006/f10603006-Context.xml"/>
+	<!-- 医疗服务机构分项费用发展趋势分析-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10603007/f10603007-Context.xml"/>
+	<!-- 药店药品使用排名-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10605001/f10605001-Context.xml"/>
+	<!-- 药店药品使用排名-->
+	<import resource="classpath:com/wondersgroup/local/k6/f10605002/f10605002-Context.xml"/>
+</beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10508001 Context</description>
+
+	<bean id="f10508001Action"
+		class="com.wondersgroup.local.k5.f10508001.action.F10508001Action"
+		scope="prototype">
+		<description>综合查询-审核查询</description>
+		<property name="f10508001VS" ref="f10508001VS"></property>
+	</bean>
+	<bean id="f08exportExcelAction"
+		class="com.wondersgroup.local.k5.f10508001.action.ExportExcelAction"
+		scope="prototype">
+		<description>导出ExcelAction</description>
+		<property name="f10508001VS" ref="f10508001VS"></property>
+	</bean>
+
+	<bean id="f10508001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10508001.vs.impl.F10508001VSImpl">
+				<property name="f10508001BS" ref="f10508001BS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

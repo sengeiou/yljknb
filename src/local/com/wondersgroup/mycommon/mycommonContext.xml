@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!--=============修改密码===========-->
+	<bean id="modifyPwdAction" class="com.wondersgroup.mycommon.web.action.ModifyPwdAction" scope="prototype">
+		<property name="pubService" ref="pubService"></property>
+	</bean>
+	
+	<bean id="pubService" parent="basicTxProxy">
+		<property name="target" ref="pubServiceImpl"></property>
+	</bean>
+	
+	<bean id="pubServiceImpl" class="com.wondersgroup.mycommon.service.impl.PubServiceImpl" >
+	</bean>
+	
+	
+</beans>

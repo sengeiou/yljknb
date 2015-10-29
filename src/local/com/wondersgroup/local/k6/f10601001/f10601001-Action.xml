@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k6/f10601001" extends="shyb-default" namespace="/k6/f10601001">
+		 <action name="index" class="linkAction">
+			<result name="success">/pages/k6/f10601001/f10601001.jsp</result>
+	    </action>
+	    
+	    <!-- 查询参保人就诊信息显示图标 -->
+	    <action name="loadInsurVisit" class="queryInsurExpendAction" method="loadInsurVisitInfo"/>
+	    
+	    <!-- 查询参医疗类别信息显示grid -->
+	    <action name="loadInsurCensu" class="queryInsurExpendAction" method="loadInsurCensuInfo"/>
+	    
+	    <!-- 查询疾病分类 显示grid -->
+	    <action name="loadInsurDise" class="queryInsurExpendAction" method="loadInsurDiseInfo"/>
+	    
+	    <!-- 查询就诊信息 -->
+	    <action name="loadInsurVis" class="queryInsurVisitInfoAction" method="loadInsurVisitInfo"/>
+	    
+	    <!-- 查询处方信息 -->
+	    <action name="loadInsurPres" class="queryInsurVisitInfoAction" method="loadInsurPresInfo"/>
+	    
+	    <!-- 历史违规记录 -->
+	    <action name="loadViolateRecord" class="queryInsurVisitInfoAction" method="loadViolateRecordInfo"/>
+	    
+	</package>
+</struts>

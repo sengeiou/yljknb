@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>一体化平台 应用资源配置</description>
+
+	<bean id="refreshAction"
+		class="com.wondersgroup.wssip.application.workspace.RefreshAction">
+		<description>防登录过期Action</description>
+	</bean>
+	<bean id="getDicAction"
+		class="com.wondersgroup.wssip.application.dictionary.DicAction"
+		>
+		<description>字典查询Action</description>
+	</bean>
+	<bean id="navigationAction"
+		class="com.wondersgroup.wssip.application.workspace.NavigationAction">
+	</bean>
+
+	<bean id="logoutAction"
+		class="com.wondersgroup.wssip.application.login.LogoutAction">
+		<description>用户退出登录Action</description>
+		<!--<property name="userService" ref="userService"></property>-->
+	</bean>
+
+	<!--<bean id="menuResourceProxy"
+		class="com.wondersgroup.wssip.commons.security.impl.MenuResourceProxy">
+		<description>菜单资源代理</description>
+		<property name="menuService" ref="menuService"></property>
+		<property name="rootMenuId"
+			value="${workspace.rootmenuid}">
+		</property>
+	</bean>
+
+	<bean id="userSecurityProxy"
+		class="com.wondersgroup.wssip.commons.security.UserSecurityProxy">
+		<description>用户权限代理</description>
+		<property name="securityResourceProxies">
+			<list>
+				<ref bean="menuResourceProxy" />
+			</list>
+		</property>
+	</bean>-->
+
+	<bean id="abstractLoginAction" class="com.wondersgroup.wssip.application.login.LoginAction" abstract="true">
+		<description>抽象登录Action</description>
+		<property name="authenticactionService" ref="authenticactionService"/>
+		<property name="authorizationService" ref="authorizationService"/>
+		<property name="organService" ref="organService" />
+		<property name="domainService" ref="domainService" />
+		<property name="menuService" ref="menuService"></property>
+		<property name="treeOrganDataProvider" ref="areaDataProvider"></property>
+		<property name="domainCode" value="${resource.domain.code}"/>
+		<property name="applicationCode" value="${resource.application.code}"/>
+	</bean>
+	
+	
+
+	<!--<bean id="abstractWorkspaceAction" class="com.wondersgroup.wssip.application.workspace.AbstractWorkspaceAction" abstract="true">
+		<property name="userSecurityProxy" ref="userSecurityProxy"></property>
+	</bean>-->
+	
+	<bean id="abstractWorkspaceAction" class="com.wondersgroup.wssip.application.workspace.AbstractWorkspaceAction" abstract="true">
+		<property name="menuService" ref="menuService"></property>
+	</bean>
+</beans>

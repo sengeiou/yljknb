@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k3/f10301003" extends="shyb-default" namespace="/k3/f10301003">
+		
+		<!-- 查询稽核案件详情 -->
+		<action name="queryAuditCaseDetails" class="queryAuditCaseDetailsAction" />
+		
+		<!-- 根據主鍵aaz318 查詢案件詳情 -->
+		<action name="loadAuditCase" class="queryAuditCaseDetailsAction" method="loadAuditCaseDetails"/>
+		
+		<!-- 根据aaz318 查询被稽核对象 -->
+		<action name="queryBeAuditTargetInfo" class="queryBeAuditTargetInfoAction" />
+		
+		<!-- 根据逐渐aaz010 查询参保人员 ac01 信息 -->
+		<action name="loadInsuredPerson" class="queryBeAuditTargetInfoAction" method="loadInsuredPersonInfo"/>
+		
+		<!-- 根据逐渐aaz010查询 医师 kf05 信息 -->
+		<action name="loadPhysician" class="queryBeAuditTargetInfoAction" method="loadPhysicianInfo"/>
+		
+		<!-- 根据主键aaz010查询 医疗服务机构 kb01信息 -->
+		<action name="loadMedicalMechanism" class="queryBeAuditTargetInfoAction" method="loadMedicalMechanismInfo"/>
+		
+		<!-- 確認立案 -->
+		<action name="registerConfirm" class="registerConfirmAction" />
+		
+		<!-- 立案否决 -->
+		<action name="registerReject" class="registerConfirmAction" method="registerRejectOperate"/>
+		
+	</package>
+</struts>

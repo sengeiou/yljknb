@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="/k3/f10301006" extends="shyb-default" namespace="/k3/f10301006">
+	
+		<!-- 保存稽核结论登记信息 -->
+		<action name="saveAuditVerdict" class="saveAuditVerdictAction"/>
+		
+		<!-- 调查完成 -->
+		<action name="registDone" class="saveAuditVerdictAction" method="registDone"/>
+		
+		<!-- 查询待稽核结论登记的案件 -->
+		<action name="queryCaseConclusion" class="queryCaseConclusionAction"/>
+		
+		<!-- 查询待稽核结论登记的案件信息 -->
+		<action name="queryAuditCaseInfoByAbz001" class="queryCaseConclusionAction" method="queryAuditCaseInfoByAbz001"/>
+		
+		<!-- 稽核对象告知 -->
+		<action name="saveNotify" class="saveNotifyAction"  method="saveNotify"></action>
+		<!-- 导出告知Word -->
+		<action name="exportWord_gz" class="saveNotifyAction" method="exportWord_gz"> </action>	
+		
+	</package>
+</struts>

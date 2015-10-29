@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/report/geren" extends="shyb-default" namespace="/report/geren">
+
+		<action name="index" class="linkAction">
+			<result name="success">/pages/report/geren.jsp</result>
+		</action>
+		<!-- 分页统计申诉情况 -->
+		<action name="timeline" class="gerenAction" method="timeline" />
+
+		<action name="gereninfo" class="gerenAction" method="gereninfo" />
+		
+		<action name="getFeeItemsConstituentDataGeren" class="gerenAction" method="getFeeItemsConstituentDataGeren" />
+		
+		<action name="getFundSourceConsituentDataGeren" class="gerenAction" method="getFundSourceConsituentDataGeren" />
+		
+		<action name="getOtherIndicatorsDataGeren" class="gerenAction" method="getOtherIndicatorsDataGeren" />
+		
+		<action name="queryJZQKGrid" class="gerenAction" method="queryJZQKGrid" />
+		
+		<action name="queryFYMXGrid" class="gerenAction" method="queryFYMXGrid" />
+		
+		<action name="queryYDXXGrid" class="gerenAction" method="queryYDXXGrid" />
+		
+		<action name="queryLSWGGrid" class="gerenAction" method="queryLSWGGrid" />
+		
+	</package>
+</struts>

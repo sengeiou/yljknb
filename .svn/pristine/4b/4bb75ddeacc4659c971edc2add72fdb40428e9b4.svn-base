@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10402001 Context</description>
+	
+     <bean id="queryModelManageAction"
+		class="com.wondersgroup.local.k4.f10402001.action.QueryModelManageAction"
+		scope="prototype">
+		<description>分页查询规则模板</description>
+		<property name="f10402001VS" ref="f10402001VS"></property>
+	</bean>
+	
+	<bean id="updateModelManageAae100Action"
+		class="com.wondersgroup.local.k4.f10402001.action.UpdateModelManageAae100Action"
+		scope="prototype">
+		<description>启用规则模板</description>
+		<property name="f10402001VS" ref="f10402001VS"></property>
+	</bean>
+	
+	<bean id="updateModelManageAction"
+		class="com.wondersgroup.local.k4.f10402001.action.UpdateModelManageAction"
+		scope="prototype">
+		<description>更新模板</description>
+		<property name="f10402001VS" ref="f10402001VS"></property>
+	</bean>
+	
+	<bean id="loadModelManageAction"
+		class="com.wondersgroup.local.k4.f10402001.action.LoadModelManageAction"
+		scope="prototype">
+		<description>加载单个规则模板</description>
+		<property name="f10402001VS" ref="f10402001VS"></property>
+	</bean>
+	
+	 <bean id="loadModelInitDataAction"
+		class="com.wondersgroup.local.k4.f10402001.action.LoadModelInitData"
+		scope="prototype">
+		<description>加载规则模板初始数据</description>
+	</bean>
+	
+	<bean id="queryRuleAction"
+		class="com.wondersgroup.local.k4.f10402001.action.QueryRuleAction"
+		scope="prototype">
+		<description>分页查询规则</description>
+		<property name="f10402001VS" ref="f10402001VS"></property>
+	</bean>
+	
+	<bean id="querySchemeAction"
+		class="com.wondersgroup.local.k4.f10402001.action.QuerySchemeAction"
+		scope="prototype">
+		<description>分页查询方案</description>
+		<property name="f10402001VS" ref="f10402001VS"></property>
+	</bean>
+	
+	<bean id="saveModelAction"
+		class="com.wondersgroup.local.k4.f10402001.action.SaveModelManageAction"
+		scope="prototype">
+		<description>保存规则模板</description>
+		<property name="f10402001VS" ref="f10402001VS"></property>
+	</bean>
+	
+	<bean id="f10402001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10402001.vs.impl.F10402001VSImpl">
+				<property name="ruleManageBS" ref="ruleManageBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

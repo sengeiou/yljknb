@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10301014 Context</description>
+	
+	<bean id="queryCaseInfoNewAction" class="com.wondersgroup.local.k3.f10301014.action.QueryCaseInfoNewAction" scope="prototype">
+		  <description>查询案件信息</description>
+		  <property name="f10301014VS" ref="f10301014VS"></property>
+	</bean>
+	<bean id="agreeAuditCaseAction" class="com.wondersgroup.local.k3.f10301014.action.AgreeAuditCaseAction" scope="prototype">
+		  <description>案件结案</description>
+		  <property name="f10301014VS" ref="f10301014VS"></property>
+	</bean>
+	
+
+	<bean id="f10301014VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301014.vs.impl.F10301014VSImpl">
+				<property name="f10301014BS" ref="f10301014BS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

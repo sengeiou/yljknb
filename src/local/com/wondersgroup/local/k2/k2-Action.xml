@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 智能审核概况查看 -->
+	<include file="com/wondersgroup/local/k2/f10201001/f10201001-Action.xml" />
+	<!-- 单据初审 -->
+	<include file="com/wondersgroup/local/k2/f10201002/f10201002-Action.xml" />
+	<!-- 单据复审 -->
+	<include file="com/wondersgroup/local/k2/f10201003/f10201003-Action.xml" />
+	<!--审核复议 -->
+	<include file="com/wondersgroup/local/k2/f10201004/f10201004-Action.xml" />
+	<!--批量扣款任务计划 -->
+	<include file="com/wondersgroup/local/k2/f10201005/f10201005-Action.xml" />
+	<!--单据审核 -->
+	<include file="com/wondersgroup/local/k2/f10201006/f10201006-Action.xml" />
+	<!--单据复议 -->
+	<include file="com/wondersgroup/local/k2/f10201007/f10201007-Action.xml" />
+	<!--汇总查询 -->
+	<include file="com/wondersgroup/local/k2/f10202001/f10202001-Action.xml" />
+	<!--智能审核结果查询 -->
+	<include file="com/wondersgroup/local/k2/f10202002/f10202002-Action.xml" />
+	<!--费用申诉->申诉审核 -->
+	<include file="com/wondersgroup/local/k2/f10203002/f10203002-Action.xml" />
+	<!--复议审核 -->
+	<include file="com/wondersgroup/local/k2/f10204001/f10204001-Action.xml" />
+	<!-- 主动复议 -->
+	<include file="com/wondersgroup/local/k2/f10204002/f10204002-Action.xml" />
+	<!--复议处理查询 -->
+	<include file="com/wondersgroup/local/k2/f10204003/f10204003-Action.xml" />
+
+	<!--人工初审 -->
+	<include file="com/wondersgroup/local/k2/f10203001/f10203001-Action.xml" />
+	<!--审核查询 -->
+	<include file="com/wondersgroup/local/k2/f10203003/f10203003-Action.xml" />
+	
+	
+	<!--综合查询-审核查询 -->
+	<include file="com/wondersgroup/local/k2/f10202003/f10202003-Action.xml" />
+	<!--综合查询-复议查询 -->
+	<include file="com/wondersgroup/local/k2/f10202004/f10202004-Action.xml" />
+	
+	<!--单病种审核 -->
+	<include file="com/wondersgroup/local/k2/f10205001/f10205001-Action.xml" />
+	<!--单病种审核 查询-->
+	<include file="com/wondersgroup/local/k2/f10206001/f10206001-Action.xml" />
+</struts>
+

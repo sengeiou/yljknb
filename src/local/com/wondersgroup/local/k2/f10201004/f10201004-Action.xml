@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k2/f10201004"  extends="shyb-default" namespace="/k2/f10201004">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k2/f10201004/f10201004.jsp</result>
+	   </action>
+	   
+	   <!-- 审核复审查询单据 -->
+	   <action name="queryF10201004" class="f10201004QueryAction" method="queryF10201004"></action>
+	   <!-- 审核复审查询单据 -->
+	   <action name="queryF10201004Detail" class="f10201004QueryAction" method="queryF10201004Detail"></action>
+	   
+	   
+	   <!-- 审核复议的审核操作 -->
+	   <action name="saveF10201004" class="f10201004SaveAction" method="saveF10201004"></action>
+	   
+	   
+	   
+	</package>
+</struts>

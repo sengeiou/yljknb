@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<package name="/k3/f10301007" extends="shyb-default" namespace="/k3/f10301007">
+	
+		<!-- 稽核结论确认查询apa011是0 -->
+		<action name="queryWaitAffirm" class="queryWaitAffirmAction"/>
+		<!-- 加载案件信息 -->
+		<action name="loadAuditCaseInfoByAbz001" class="queryWaitAffirmAction" method="loadAuditCaseInfoByAbz001"/>
+		<!-- 加载被稽核对象 apa011是0 -->
+		<action name="loadAuditTargetByAaz318" class="queryWaitAffirmAction" method="loadAuditTargetInfoByAaz318"/>
+		
+		<!-- 调查重审 -->
+		<action name="surveyReview" class="surveyReviewAction"/>
+		
+		<!-- 确认通过 -->
+		<action name="confirmPass" class="confirmPassAction"/>
+		
+		<!-- 确认待审批 -->
+		<action name="confirmToSurvey" class="confirmPassAction" method="confirmToSurvey"></action>
+	
+	</package>
+	
+</struts>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10605001 Context</description>
+	
+	<bean id="f10605001Action"
+		class="com.wondersgroup.local.k6.f10605001.action.F10605001Action"
+		scope="prototype">
+		<description></description>
+		<property name="f10605001VS" ref="f10605001VS"></property>
+	</bean>
+	
+	<bean id="selectMedAction"
+		class=" com.wondersgroup.local.k6.f10605001.action.SelectMedAction"
+		scope="prototype">
+		<description></description>
+		<property name="f10605001VS" ref="f10605001VS"></property>
+	</bean>
+	
+	<bean id="f10605001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k6.f10605001.vs.impl.F10605001VSImpl">
+				<property name="f10605001BS" ref="f10605001BS"></property>
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	
+	
+	<bean id="jkgzBS" class="com.wondersgroup.local.jkgz.bs.impl.JkgzBSImpl">
+		<property name="dataSource">
+			<ref bean="ylzbSource"/>
+		</property>
+	</bean>
+	<bean id="filterService"
+		class="com.wondersgroup.local.jkgz.service.filter.impl.FilterServiceImpl">
+		<property name="bs">
+			<ref bean="jkgzBS"/>
+		</property>
+		<property name="gz0300Service">
+			<ref bean="Gz0300Service"/>
+		</property>
+	</bean>
+	<bean id="Gz0300Service"
+		class="com.wondersgroup.local.jkgz.service.gz.impl.Gz0300ServiceImpl">
+		<property name="bs">
+			<ref bean="jkgzBS"/>
+		</property>
+	</bean>
+	<bean id="jkgzMain"
+		class="com.wondersgroup.local.jkgz.main.impl.JkgzMainVSImpl">
+	</bean>
+	<bean id="gzSave"
+		class="com.wondersgroup.local.jkgz.service.save.impl.Gz_saveImpl">
+		<property name="bs">
+			<ref bean="jkgzBS"/>
+		</property>
+	</bean>
+	<!-- 核心库 DBCP -->
+	<bean id="ylzbSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@//10.1.63.183:1521/ylfwjk4"/>
+		<property name="username" value="ylfwjk"/>
+		<property name="password" value="ylfwjk"/>	
+		<property name="maxActive" value="20" />  
+       	<property name="maxIdle" value="10" />  
+       	<property name="maxWait" value="10000" />  
+       	<property name="removeAbandoned" value="true"/>  
+       	<property name="removeAbandonedTimeout" value="30"/>  
+       	<property name="logAbandoned" value="true"/> 
+	</bean>
+	
+</beans>

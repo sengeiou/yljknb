@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k2/f10201005"  extends="shyb-default" namespace="/k2/f10201005">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k2/f10201005/f10201005.jsp</result>
+	   </action>
+	   
+	   <!-- 保存扣款计划 -->
+	   <action name="saveDeductPlan" class="medDeductPlanOperateAction"/>
+	   
+	   <!-- 分页扣款计划事件 -->
+	   <action name="queryMedDeductPlan" class="medDeductPlanOperateAction" method="queryMedDeductPlan"/>
+	   
+	   <!-- 分页查询医院扣款计划 -->
+	   <action name="queryMedDeductHosPlan" class="medDeductPlanOperateAction" method="queryMedDeductHosPlan"/>
+	   
+	   <!-- 分页查询明细扣款计划 -->
+	   <action name="queryMedDeductDetailPlan" class="medDeductPlanOperateAction" method="queryMedDeductDetailPlan"/>
+	   
+	</package>
+</struts>

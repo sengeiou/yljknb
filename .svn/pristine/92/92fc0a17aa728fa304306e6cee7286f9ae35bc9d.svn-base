@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k6/f10604001" extends="shyb-default" namespace="/k6/f10604001">
+		 <action name="index" class="linkAction">
+			<result name="success">/pages/k6/f10604001/f10604001.jsp</result>
+	    </action>
+	    
+	    <action name="queryFyzb" class="queryFyzbAction"/>
+		
+		<action name="queryPie" class="queryFyzbAction" method="queryPie"/>
+		
+		<action name="queryFyZTemp" class="queryFyZTempAction"/>
+		
+		<action name="queryPmTemp" class="queryPmTempAction"/>
+		
+		<action name="queryColumn" class="queryPmTempAction" method="queryColumn"/>
+		
+		<action name="loadFxTempNld" class="queryFxTempAction" method="loadFxTempNldInfo"/>
+		
+		<action name="loadFxTempXb" class="queryFxTempAction" method="loadFxTempXbInfo"/>
+		
+		<action name="queryStrip" class="queryFxTempAction" method="queryStripInfo"/>
+		
+		<action name="queryFyYyTemp" class="queryFyYyTempAction" method=""/>
+		
+		<action name="queryFyYyTempScrip" class="queryFyYyTempAction" method="queryFyYyTempScripInfo"/>
+		
+	</package>
+</struts>

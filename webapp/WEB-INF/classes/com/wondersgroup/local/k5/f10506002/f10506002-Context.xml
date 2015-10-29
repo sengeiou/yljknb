@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10506002 Context</description>
+	 
+	<bean id="f10506002Action" class="com.wondersgroup.local.k5.f10506002.action.ComplaintHandlingPageAction" scope="prototype">
+		  <description>复议申请审核</description>
+		  <property name="f10506002vs" ref="f10506002vs"></property>
+	</bean>
+	<bean id="f10506002vs" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10506002.vs.impl.F10506002VSImpl">
+				<property name="f10506002Bs" ref="f10506002Bs"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="f10506002InfoAction" class="com.wondersgroup.local.k5.f10506002.action.ComplaintHandlingInfoAction" scope="prototype">
+		  <description>复议申请审核</description>
+		  <property name="f10506002InfoVs" ref="f10506002InfoVs"></property>
+	</bean>
+	<bean id="f10506002InfoVs" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10506002.vs.impl.F10506002VSImpl">
+				<property name="f10506002Bs" ref="f10506002Bs"></property>
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

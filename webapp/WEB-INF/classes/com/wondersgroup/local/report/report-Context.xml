@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>
+		Spring Configuration .
+	</description>
+
+	<!-- 分析报告参保人 -->
+	<import resource="classpath:com/wondersgroup/local/report/geren/geren-Context.xml"/>
+	<!-- 分析报告医疗机构 -->
+    <import resource="classpath:com/wondersgroup/local/report/yiyuan/yiyuan-Context.xml"/>
+	<!-- 分析报告医师-->
+    <import resource="classpath:com/wondersgroup/local/report/yishi/yishi-Context.xml"/>
+	
+</beans>

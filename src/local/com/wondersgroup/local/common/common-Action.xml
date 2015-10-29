@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/common" extends="shyb-default" namespace="/common">
+	
+	    <!-- 分页查询医师对象信息 -->
+		<action name="queryDoctor" class="queryDoctorAction" />
+		
+		<!-- 分页查询参保人对象信息 -->
+		<action name="queryInsuPerson" class="queryInsuPersonAction" />
+		
+		<!-- 分页查询医疗机构对象信息 -->
+		<action name="queryMedInstitution" class="queryMedInstitutionAction" />
+		
+		<!-- 查询当前数据所包含的医疗机构 -->
+		<action name="queryHospital" class="queryMedInstitutionAction" method="queryHospital"/>
+		
+		<!-- 查询当前数据所包含的医疗机构 -->
+		<action name="queryHospitalDBZ" class="queryMedInstitutionAction" method="queryHospitalDBZ"/>
+		
+		<!-- 查询所有数据所包含的医疗机构 -->
+		<action name="queryHospitalALL" class="queryMedInstitutionAction" method="queryHospitalALL"/>
+		
+		<!-- 查询当前数据所包含的知识点 -->
+		<action name="queryZSD" class="queryMedInstitutionAction" method="queryZSD"/>
+		
+		<!-- 查询所有数据所包含的知识点-->
+		<action name="queryZSDALL" class="queryMedInstitutionAction" method="queryZSDALL"/>
+		
+		<!-- 分页查询 稽核案件信息 -->
+		<action name="queryAuditCase" class="queryAuditCaseAction" />
+		
+		<!-- 根据案件编号 分页查询案件信息 -->
+		<action name="loadAuditCaseByAbz001" class="queryAuditCaseAction" method="loadAuditCaseInfoByAbz001"/>
+		
+		<!-- 根据案件ID 查询案件详情 -->
+		<action name="loadAuditCaseByAaz318" class="queryAuditCaseAction" method="loadAuditCaseInfoByAaz318"/>
+		
+		<!-- 分页查询 被稽核对象信息 -->
+		<action name="queryBeAuditTarget" class="queryBeAuditTargetAction" />
+		
+		<!-- 根据稽核案件ID 分页查询被稽核对象 -->
+		<action name="loadBeAuditTargetByAaz318" class="queryBeAuditTargetAction" method="loadBeAuditTargetInfoByAaz318"/>
+		
+		<!-- 根据被稽核对象ID 查询被稽核对象详情 -->
+		<action name="loadBeAuditTargetByAaz077" class="queryBeAuditTargetAction" method="loadBeAuditTargetInfoByAaz077"/>
+		
+		<!-- 分页查询 调查记录 -->
+		<action name="querySurveyRecord" class="querySurveyRecordAction" />
+		
+		<!-- 根据调查记录ID 查询调查记录详情 -->
+		<action name="loadSurveyRecordByAaz148" class="querySurveyRecordAction" method="loadSurveyRecordInfoByAaz148"/>
+
+		<!-- 查询疾病分类-->
+		<action name="querySickLever" class="querySickLeverAction"/>
+
+		<!-- excel导出 -->
+		<action name="excelExport" class="excelExportAction" />
+		
+		<!-- 查询疾病信息  ka06-->
+		<action name="queryDisease" class="queryDiseaseAction" />
+		
+		<!-- 审核历史查询 -->
+		<action name="queryHistory" class="queryHistoryAction"></action>
+		
+		<action name="queryHistoryDBZ" class="queryHistoryDBZAction"></action>
+		
+		<action name="fileExist" class="queryHistoryAction" method="fileExist"></action>
+		
+		<action name="fileExistDBZ" class="queryHistoryDBZAction" method="fileExistDBZ"></action>
+		
+		<action name="downLoad" class="queryHistoryAction" method="downLoad">
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="contentDisposition">attachment;filename="${#request['fileName']}"</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="downLoadDBZ" class="queryHistoryDBZAction" method="downLoadDBZ">
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="contentDisposition">attachment;filename="${#request['fileName']}"</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<!-- 规则汇总 -->
+		<action name="queryGzSummary" class="queryGzSummaryAction"></action>
+	</package>
+</struts>

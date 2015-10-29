@@ -1,0 +1,110 @@
+# These properties are only used when building the CuteFrameworks expanded from the distribution.
+project.name = blank
+project.dir = .
+project.lib.dir = ${project.dir}/lib
+project.lib.compile.dir = ${project.lib.dir}/compile
+project.lib.running.dir = ${project.lib.dir}/running
+project.lib.jdbc.dir = ${project.lib.dir}/jdbc
+project.dist.dir = ${project.dir}/dist
+
+springFile = E:/workspace/blank-basic/src/java/bookContext.xml
+hibernateFile = E:/workspace/blank-basic/src/java/hibernate.cfg.xml
+packageName = com.wondersgroup.book
+businessName = Book
+
+###########################################
+## WEB APPLICATION                       ##
+###########################################
+project.webapp.dir = ${project.dir}/webapp
+project.web-inf.dir = ${project.webapp.dir}/WEB-INF
+
+###########################################
+## SQL                                  ##
+###########################################
+project.db.dir = ${project.dir}/db
+project.ddl.dir = ${project.db.dir}/ddl
+
+###########################################
+## CLASS DEFINE                          ##
+###########################################
+project.classes.dir = ${project.web-inf.dir}/classes
+
+###########################################
+## SOURCE CODE                           ##
+###########################################
+project.src.dir = ${project.dir}/src
+project.java.dir = ${project.src.dir}/java
+project.test.dir = ${project.src.dir}/test
+
+###########################################
+## doc                                   ##
+###########################################
+project.doc.dir = ${project.dir}/doc
+
+# Unit test reports from JUnit are deposited into this directory
+project.reports.dir = ${project.doc.dir}/junit
+project.reports.xml.dir = ${project.reports.dir}/xml
+project.reports.html.dir = ${project.reports.dir}/html
+
+# Coverage reports are deposited into these directories
+project.coverage.instrument = ${project.doc.dir}/instrument
+project.coverage.dir = ${project.doc.dir}/cover
+project.coverage.xml.dir = ${project.coverage.dir}/xml
+project.coverage.html.dir = ${project.coverage.dir}/html
+
+###########################################
+## DEPLOY                                ##
+###########################################
+project.web-deploy.dir = C:/
+
+###########################################
+## DataSource                            ##
+###########################################
+
+dbName oracle
+hibernate.connection.driver_class oracle.jdbc.driver.OracleDriver
+hibernate.connection.username  
+hibernate.connection.password  
+hibernate.connection.url jdbc:oracle:thin:@cftest:1521:oracle
+
+#dbName sybase
+#hibernate.connection.driver_class net.sourceforge.jtds.jdbc.Driver
+#hibernate.connection.url jdbc:jtds:sybase://cf-yjp:5000/cf;charset=utf-8;SendStringParameterAsUnicode=true
+#hibernate.connection.username  
+#hibernate.connection.password  
+
+#dbName mysql
+#hibernate.connection.driver_class com.mysql.jdbc.Driver
+#hibernate.connection.username  
+#hibernate.connection.password  
+#hibernate.connection.url jdbc:mysql://localhost:3306/cuteframework
+
+#dbName sqlserver2000
+#hibernate.connection.driver_class net.sourceforge.jtds.jdbc.Driver
+#hibernate.connection.url jdbc:jtds:sqlserver://rdserver2:1433/CuteFramework
+#hibernate.connection.username  
+#hibernate.connection.password  
+
+#dbName sqlserver2005
+#hibernate.connection.driver_class com.microsoft.sqlserver.jdbc.SQLServerDriver
+#hibernate.connection.url jdbc:sqlserver://10.255.221.8:1433;DatabaseName=Test
+#hibernate.connection.username  
+#hibernate.connection.password  
+
+#dbName informix
+#hibernate.connection.driver_class com.informix.jdbc.IfxDriver
+#hibernate.connection.url jdbc:informix-sqli://10.3.11.12:7515/uaas:INFORMIXSERVER=k460secsoc;
+#hibernate.connection.username  
+#hibernate.connection.password  
+
+#dbName db2
+#hibernate.connection.driver_class com.ibm.db2.jcc.DB2Driver
+#hibernate.connection.url jdbc:db2://cftest:50000/cf
+#hibernate.connection.username  
+#hibernate.connection.password  
+
+#dbName derby
+#hibernate.connection.driver_class org.apache.derby.jdbc.EmbeddedDriver
+#hibernate.connection.username 
+#hibernate.connection.password 
+#hibernate.connection.url jdbc:derby:${CuteFramework.web-inf.dir}/derby;create=true

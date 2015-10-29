@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k5/f10506001" extends="shyb-default" namespace="/k5/f10506001">
+
+		<action name="index" class="linkAction">
+			<result name="success">/pages/k5/f10506001/f10506001.jsp</result>
+		</action>
+		<!-- 分页查询违规单据统计信息 -->
+		<action name="queryViolationsDocuments" class="f10506001QueryAction"
+			method="queryViolationsDocuments" />
+		<!-- 分页查询违规单据明细统计信息 -->
+		<action name="queryViolationsDocumentsDetail" class="f10506001QueryAction"
+			method="queryViolationsDocumentsDetail" />
+		<!-- 查询单据明细违规信息 -->
+		<action name="queryViolationsDocumentsDetailIllegal" class="f10506001QueryAction"
+			method="queryViolationsDocumentsDetailIllegal" />
+		<!-- 查询单据明细审核信息 -->
+		<action name="queryCheckRecord" class="f10506001QueryAction"
+			method="queryCheckRecord" />
+		<!-- 查询违规单据违规信息 -->
+		<action name="queryViolationsDocumentIllegal" class="f10506001QueryAction"
+			method="queryViolationsDocumentIllegal" />
+		<!-- 流程-下发医师 -->
+		<action name="sendToDoctor" class="f10506001QueryAction"
+			method="sendToDoctor" />
+		<!-- 查询规则类别信息 -->
+		<action name="getGzfl" class="f10506001QueryAction" method="getGzfl" />
+		<!-- 查询规则名称信息 -->
+		<action name="getGzflxx" class="f10506001QueryAction" method="getGzflxx" />
+
+		<!-- 审核历史信息 
+		<action name="getChartSZJ" class="f10506001QueryAction" method="getChartSZJ"/>
+		保存上传文件
+		<action name="saveUploadFile" class="uploadFileAction"  />
+		流程-有嫌疑（修改kc62表状态信息）
+		<action name="updateKc62" class="uploadFileAction" method="updateKc62"/>  -->
+		
+		<!-- 查询医院信息 -->
+		<action name="queryMedDocumentByHos" class="queryHosAction" />
+
+		<!-- 单据明细复议处理action——单个 -->
+		<action name="preCheckSingle" class="f10506001QueryAction"
+			method="preCheckSingle"></action>
+			
+		<!-- 单据明细复议处理action——批量 -->
+		<action name="preCheckBatch" class="f10506001QueryAction"
+			method="preCheckBatch"></action>
+		<!-- 导出Excel -->
+	    <action name="f06exportExcel" class="f06exportExcelAction" />
+	</package>
+</struts>

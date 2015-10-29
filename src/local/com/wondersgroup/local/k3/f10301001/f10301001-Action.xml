@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k3/f10301001" extends="shyb-default" namespace="/k3/f10301001">
+	
+	    <!-- 保存稽核问题信息 -->
+		<action name="saveAuditProblem" class="saveAuditProblemAction" />
+		
+		<!-- 修改稽核问题信息 -->
+		<action name="updateAuditProblem" class="updateAuditProblemAction"></action>
+		
+		<!-- 删除稽核问题信息 -->
+		<action name="deleteAuditProblem" class="deleteAuditProblemAction"></action>
+		
+		<!-- 查询需要   修改稽核问题信息 -->
+		<action name="loadAuditProblem" class="updateAuditProblemAction" method="loadAuditProblemInfo"></action>
+		
+		<!-- 分页查询稽核问题信息 -->
+		<action name="queryAuditProblem" class="queryAuditProblemAction" method=""></action>
+		
+		<!-- 简单处理-->
+		<action name="simpExcute" class="updateAuditProblemAction" method="simpExcute"></action>
+		
+		<!-- 导出Word -->
+		<action name="exportWord_yddj" class="exportWord_yddj" method="exportWord_yddj"/>
+	</package>
+</struts>

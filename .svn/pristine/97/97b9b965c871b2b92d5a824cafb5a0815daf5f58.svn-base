@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10301023 Context</description>
+	
+	<!-- 一级审批 -->
+	<bean id="f10301023Action" class="com.wondersgroup.local.k3.f10301023.action.F10301023Action" scope="prototype">
+		<description>一级审批查询</description>
+		<property name="f10301023vs" ref="f10301023VS"></property>
+	</bean>
+	
+	
+	<bean id="queryCaseAction" class="com.wondersgroup.local.k3.f10301023.action.QueryCaseAction">
+		<description>撤销一级审批</description>
+		<property name="f10301023vs" ref="f10301023VS"></property>
+	</bean>
+	
+	<bean id="f10301023VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301023.vs.impl.F10301023VSImpl">
+				<property name="f10301023bs" ref="f10301023BS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

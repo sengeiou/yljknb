@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10401003 Context</description>
+    
+  	 <bean id="queryPlanAction"
+		class="com.wondersgroup.local.k4.f10401003.action.QueryPlanAction"
+		scope="prototype">
+		<description>计划执行分页查询</description>
+		<property name="f10401003VS" ref="f10401003VS"></property>
+	</bean> 	
+	<bean id="queryTaskAction"
+		class="com.wondersgroup.local.k4.f10401003.action.QueryTaskAction"
+		scope="prototype">
+		<description>添加调度计划</description>
+		<property name="f10401003VS" ref="f10401003VS"></property>
+	</bean>
+	
+	<bean id="f10401003VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10401003.vs.impl.F10401003VSImpl">
+				<property name="planManageBS" ref="planManageBS"></property>
+			</bean>
+		</property>
+	</bean>
+		
+	
+</beans>

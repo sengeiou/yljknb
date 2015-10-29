@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k5/f10501002"  extends="shyb-default" namespace="/k5/f10501002">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k5/f10501002/f10501002.jsp</result>
+	   </action>
+	   
+	   <!-- 单据申诉操作action -->
+	   <action name="medDocumentAppealOperate" class="medDocumentAppealOperateAction" />
+	   
+	   <!-- 分页查询申诉违规单据统计信息 -->
+	   <action name="queryAppealMedDocument" class="medDocumentAppealOperateAction" method="queryAppealMedDocument"/>
+	   
+	   <!-- 分页查询申诉单据违规信息 -->
+	   <action name="queryAppealMedDocumentIllegal" class="medDocumentAppealOperateAction" method="queryAppealMedDocumentIllegal"/>
+	   
+	   <!-- 单据明细复审操作action -->
+	   <action name="medDocumentDetailAppealOperate" class="medDocumentDetailAppealOperateAction" />
+	   
+	   <!-- 分页查询申诉违规单据明细统计信息 -->
+	   <action name="queryAppealMedDocumentDetail" class="medDocumentDetailAppealOperateAction" method="queryAppealMedDocumentDetail"/>
+	   
+	    <!-- 分页查询申诉单据明细违规信息 -->
+	   <action name="queryAppealMedDocumentDetailIllegal" class="medDocumentDetailAppealOperateAction" method="queryAppealMedDocumentDetailIllegal"/>
+	   
+	</package>
+</struts>

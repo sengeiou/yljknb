@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+		<package name="/k4/f10401002" extends="shyb-default" namespace="/k4/f10401002">
+	
+	    <!-- 分页查询调度计划信息-->
+		 <action name="queryDispatchManage" class="queryDispatchManageAction" />
+		
+	    <!-- 添加调度计划-->
+		<action name="addDispatchManage" class="addDispatchManageAction" />
+		
+		<!-- 修改调度计划-->
+		<action name="updateDispatchManage" class="updateDispatchManageAction" />
+		
+		<action name="loadDispatchManage" class="loadDispatchManageAction" />
+		
+		<!-- 规则任务添加-->
+		<action name="addRuleTask" class="addRuleTaskAction" />
+		
+		<!--查询规则信息  -->
+		<action name="queryRule" class="queryRuleTaskAction" />
+		
+		<!--删除规则信息  -->
+		<action name="deleteRule" class="deleteRuleTaskAction" />
+		
+		<!--判断任务类型  -->
+		<action name="checkTask" class="checkTaskAction" />
+		
+		<!-- 查询分析分析  -->
+		<action name="queryAnalyze" class="queryAnalyzeAction" />
+		
+		<!--添加分析主题信息-->
+		<action name="addAnalyze" class="addAnalyzeAction" />
+		
+		<!--删除分析主题信息-->
+		<action name="deleteAnalyze" class="deleteAnalyzeAction" />
+		
+		<!--设置优先级-->
+		<action name="setPriority" class="setPriorityAction" />
+		
+		 <!-- 启动调度计划-->
+		<action name="startDispatchManage" class="startDispatchManageAction" />
+		 <!-- 加载调度计划数据-->
+		<action name="initDispatchData" class="initDispatchDataAction" />
+		
+		</package>
+		
+</struts>

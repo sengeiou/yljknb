@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 规则模板管理 -->
+	<!-- 方案管理 -->
+	<include file="com/wondersgroup/local/k4/f10401001/f10401001-Action.xml"/>
+	<!-- 调度计划管理 -->
+	<include file="com/wondersgroup/local/k4/f10401002/f10401002-Action.xml"/>
+	<!-- 调度日志管理 -->
+	<include file="com/wondersgroup/local/k4/f10401003/f10401003-Action.xml"/>
+	<!-- 计划管理 -->
+	<include file="com/wondersgroup/local/k4/f10402001/f10402001-Action.xml"/>
+	<!-- 规则维护 -->
+	<include file="com/wondersgroup/local/k4/f10402005/f10402005-Action.xml"/>
+	
+	<!-- 监控规则定制 -->
+	<include file="com/wondersgroup/local/k4/f10402002/f10402002-Action.xml"/>
+	
+	<!-- 分析规则定制 -->
+	<include file="com/wondersgroup/local/k4/f10402003/f10402003-Action.xml"/>
+	
+	<!-- 阈值维护 -->
+	<include file="com/wondersgroup/local/k4/f10402004/f10402004-Action.xml"/>
+	
+	
+	<!-- 规则指标 -->
+	<include file="com/wondersgroup/local/k4/f10402006/f10402006-Action.xml"/>
+	
+	<!-- 监控对象维护 -->
+	<include file="com/wondersgroup/local/k4/f10402007/f10402007-Action.xml"/>
+	
+	<!-- 规则维护 -->
+	<include file="com/wondersgroup/local/k4/f10402008/f10402008-Action.xml"/>
+</struts>
+

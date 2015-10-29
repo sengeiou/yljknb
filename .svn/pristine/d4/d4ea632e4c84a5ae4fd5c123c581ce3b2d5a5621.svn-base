@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k6/f10601002" extends="shyb-default" namespace="/k6/f10601002">
+		 <action name="index" class="linkAction">
+			<result name="success">/pages/k6/f10601002/f10601002.jsp</result>
+	    </action>
+	   <!--根据条件查询人群就医趋势   -->  
+	    <action name="querySeeDoctTrend" class="seeDoctTrendAction" method="querySeeDoctTrend"/>
+	    <!--根据条件查询人群就医趋势移动平均   -->  
+	    <action name="queryMoveAverage" class="seeDoctTrendAction" method="queryMoveAverageInfo"/>
+	</package>
+</struts>

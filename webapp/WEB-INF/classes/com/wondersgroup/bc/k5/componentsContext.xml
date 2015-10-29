@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>审核复议</description>	
+	
+	<import resource="classpath:com/wondersgroup/bc/k5/f10507001/componentContext.xml" />
+	
+	<import resource="classpath:com/wondersgroup/bc/k5/f10504001/componentContext.xml" />
+
+	
+	<import resource="classpath:com/wondersgroup/bc/k5/f10504002/componentContext.xml" />
+	
+	<!-- 申诉查询 -->
+	<import resource="classpath:com/wondersgroup/bc/k5/f10504003/componentContext.xml" />
+	
+	<import resource="classpath:com/wondersgroup/bc/k5/f10505001/componentContext.xml" />
+		
+	<!-- 复议处理 -->
+	<import resource="classpath:com/wondersgroup/bc/k5/f10506001/componentContext.xml" />
+	
+	<!-- 复议申请审核 -->
+	<import resource="classpath:com/wondersgroup/bc/k5/f10506002/componentContext.xml" />
+	
+
+	<!-- 复议查询 -->
+	<import resource="classpath:com/wondersgroup/bc/k5/f10506003/componentContext.xml" />
+	
+	
+	<!-- 医师复议查询 -->
+	<import resource="classpath:com/wondersgroup/bc/k5/f10507002/componentContext.xml" />
+	<!-- 医保办综合查询 -->
+	<import resource="classpath:com/wondersgroup/bc/k5/f10508001/componentContext.xml" />
+	
+	<!-- 单病种申诉 -->
+	<import resource="classpath:com/wondersgroup/bc/k5/f10509001/componentContext.xml" />
+
+</beans>

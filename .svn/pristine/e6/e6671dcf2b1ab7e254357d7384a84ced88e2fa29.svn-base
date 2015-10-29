@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10505001 Context</description>
+    
+   	<bean id="docApplyAction"
+		  class="com.wondersgroup.local.k5.f10505001.action.DocApplyAction"
+		  scope="prototype">
+		  <property name="f10505001VS" ref="f10505001VS"></property>
+	</bean>
+	<bean id="docApplyDetailAction"
+		  class="com.wondersgroup.local.k5.f10505001.action.DocApplyDetailAction"
+		  scope="prototype">
+		  <property name="f10505001VS" ref="f10505001VS"></property>
+	</bean>
+	<bean id="docSubmitAction"
+		  class="com.wondersgroup.local.k5.f10505001.action.DocSubmitAction"
+		  scope="prototype">
+		  <property name="f10505001VS" ref="f10505001VS"></property>
+	</bean>
+	<bean id="uploadAction"
+		  class="com.wondersgroup.local.k5.f10505001.action.UploadAction"
+		  scope="prototype">
+		  <property name="f10505001VS" ref="f10505001VS"></property>
+	</bean>
+	
+	<bean id="f10505001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10505001.vs.impl.F10505001VSImpl">
+				<property name="docAfterBS" ref="docAfterBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

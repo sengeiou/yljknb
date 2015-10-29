@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10502002 Context</description>
+
+	<bean id="queryKf66MessageAction"
+		class="com.wondersgroup.local.k5.f10502002.action.QueryKf66MessageAction"
+		scope="prototype">
+	<description>查询kf66</description>
+		<property name="f10502002VS" ref="f10502002VS"></property>
+	</bean>
+	
+
+   <bean id="saveKf66MessageAction"
+		class="com.wondersgroup.local.k5.f10502002.action.SaveKf66MessageAction"
+		scope="prototype">
+	<description>新增信息</description>
+	<property name="f10502002VS" ref="f10502002VS"></property>
+	</bean>
+
+	
+	<bean id="loadUpdatekf66MessageAction"
+		class="com.wondersgroup.local.k5.f10502002.action.LoadUpdateMessageAction"
+		scope="prototype">
+	<description>根据baz047    返回修改数据</description>
+	<property name="f10502002VS" ref="f10502002VS"></property>
+	</bean> 
+	
+	
+	<bean id="updateKf66MessageAction"
+		class="com.wondersgroup.local.k5.f10502002.action.UpdateKf66MessageAction"
+		scope="prototype">
+	<description>修改保存</description>
+	<property name="f10502002VS" ref="f10502002VS"></property>
+	</bean> 
+
+	
+	
+	<bean id="f10502002VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10502002.vs.impl.F10502002VSImpl">
+				<property name="auditComplaintBS" ref="auditComplaintBS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

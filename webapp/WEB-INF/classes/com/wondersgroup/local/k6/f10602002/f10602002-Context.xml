@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10602002 Context</description>
+	
+	<bean id="doctCataAction"
+		class="com.wondersgroup.local.k6.f10602002.action.DoctCataAction"
+		scope="prototype">
+		<property name="f10602002VS" ref="f10602002VS"></property>
+	</bean>
+	
+	<bean id="f10602002VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k6.f10602002.vs.impl.F10602002VSImpl">
+				<property name="statisticBS" ref="statisticBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

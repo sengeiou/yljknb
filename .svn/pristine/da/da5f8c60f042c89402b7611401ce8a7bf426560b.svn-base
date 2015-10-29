@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<!--<bean id="defaultDialect" class="org.hibernate.dialect.Oracle10gDialect">
+		<description>默认方言，用于Spring Jdbc分页查询</description>
+	</bean>-->
+	
+	<!--*****************************************************-->
+	<!--***********************构件引用***********************-->
+	<!--*****************************************************-->
+	<!-- 分页查询构件 -->
+	<!--<import resource="classpath:com/wondersgroup/wsscclib/pagequery/pagequeryContext.xml" />-->
+	<!-- 缓存构件 -->
+	<!--<import resource="classpath:com/wondersgroup/wsscclib/cache/cacheContext.xml" />-->
+
+	<!--*****************************************************-->
+	<!--***********************平台引用***********************-->
+	<!--*****************************************************-->
+	<import resource="classpath:com/wondersgroup/wssuap/core/base/baseContext.xml" />	
+	<import resource="classpath:com/wondersgroup/wssuap/core/authentic/authenticContext.xml" />	
+	<import	resource="classpath:com/wondersgroup/wssuap/core/resource/resourceContext.xml" />	
+	<import resource="classpath:com/wondersgroup/wssuap/client/clientContext.xml" />	
+	<import resource="classpath:com/wondersgroup/wssuap/ext/extContext.xml" />
+	<import resource="classpath:com/wondersgroup/wssuap/commons/commonContext.xml"/>
+	<!--<import resource="classpath:com/wondersgroup/wssuap/console/admin/authorityapproval/auditContext.xml"/>-->
+	<import resource="classpath:com/wondersgroup/wssuap/local/localContext.xml"/>
+	
+	
+</beans>

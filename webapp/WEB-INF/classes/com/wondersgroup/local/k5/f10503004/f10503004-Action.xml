@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k5/f10503004"  extends="shyb-default" namespace="/k5/f10503004">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k5/f10503004/f10503004.jsp</result>
+	   </action>
+	    <!-- 分页统计申诉情况 -->
+	   <action name="queryBreAuditCount" class="centerCheckAction" method="queryBreAuditCount"/>
+	   <!-- 分页统计医疗机构申诉情况 -->
+	   <action name="queryOrgAuditCount" class="centerCheckAction" method="queryOrgAuditCount"/>
+	   <!-- 分页统计医师申诉情况 -->
+	   <action name="queryDoctorAuditCount" class="centerCheckAction" method="queryDoctorAuditCount"/>
+	   
+	  
+	</package>
+</struts>

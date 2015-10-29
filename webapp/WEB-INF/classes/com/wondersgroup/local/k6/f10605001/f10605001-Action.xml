@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k6/f10605001" extends="shyb-default" namespace="/k6/f10605001">
+	
+		 <action name="index" class="linkAction">
+			<result name="success">/pages/k6/f10605001/f10605001.jsp</result>
+	    </action>
+	    
+	    <!-- 查询移动平均（图表） -->
+	   <!--  <action name="loadExpenMoveAverage" class="f10605001Action" method="loadExpenMoveAverageInfo"/> -->
+	     
+	    <!-- 查询发展趋势表(grid) -->
+	     <action name="loadDevelopTend" class="f10605001Action" method="loadDevelopTendInfo"/>
+	     
+	      <!-- 医院查询 -->
+	     <action name="selectMed" class="selectMedAction" method="selectMed"/>
+	    
+	</package>
+</struts>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k4/f10402007" extends="shyb-default" namespace="/k4/f10402007">
+		<!-- 添加对象指标信息 -->
+		<action name="addDxzb" class="addDxzbAction"></action>
+		<!-- 批量添加对象指标信息 -->
+		<action name="batchAddDxzbMessage" class="batchAddDxzbMessageAction" ></action>
+
+		<!-- 查询三大目录信息 -->
+		<action name="queryMldx" class="queryMldxAction"></action>
+
+		<!-- 查询监控对象信息 -->
+		<action name="queryDxzbMessage" class="queryDxzbMessageAction"></action>
+		<!-- 修改监控对象信息 -->
+		<action name="updataDxzbMessage" class="updataDxzbMessageAction"></action>
+		<action name="loadRuleDxzbMessage" class="loadRuleDxzbMessageAction"></action>
+		<!-- 删除监控对象信息 -->
+		<action name="deleteDxzbMessage" class="deleteDxzbMessageAction"></action>
+		<!--  -->
+		<action name="queryCaseNumberDxzb" class="queryCaseNumberDxzbAction"></action>
+		<!-- 根据gzms ID 查询  gzzb信息 -->
+		<action name="queryGzzbByGzmsId" class="queryGzzbByGzmsIdAction"></action>
+
+		<!-- 加载数据(登陆用户,当前时间) -->
+		<action name="ruleDxzbData" class="ruleDxzbDataAction"></action>
+
+		<!-- 下载文档格式 -->
+		<action name="downLoad" class="downLoadAction" method="downLoad">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="${#request['excelName']}"</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+    
+        <!-- 上传对象指标信息 -->
+		<action name="uploadDxzb" class="uploadDxzbAction" />
+		
+		<!-- 查询上传成功指标信息 -->
+		<action name="querySuccDxzbInfo" class="queryApplyDxzbInfo" method="querySuccDxzbInfo"/>
+		
+		<!-- 查询上传失败指标信息 -->
+		<action name="queryFailDxzbInfo" class="queryApplyDxzbInfo" method="queryFailDxzbInfo"/>
+		
+
+
+	</package>
+</struts>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="yljk"
+  id="myeclipse.1339121821546"
+  context-root="/yljknb"
+  j2ee-spec="5.0"
+  archive="yljk.war">
+  <attributes>
+    <attribute name="webrootdir" value="webapp" />
+  </attributes>
+</project-module>
+

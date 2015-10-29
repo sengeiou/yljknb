@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<!-- 外部受理疑点登记 -->
+	<include file="com/wondersgroup/local/k3/f10301001/f10301001-Action.xml"/>
+	
+	<!-- 查询稽核立案登记 -->
+	<include file="com/wondersgroup/local/k3/f10301002/f10301002-Action.xml"/>
+	
+	<!-- 稽核立案确认 -->
+	<include file="com/wondersgroup/local/k3/f10301003/f10301003-Action.xml"/>
+	
+	<!-- 稽核调查登记 -->
+	<include file="com/wondersgroup/local/k3/f10301004/f10301004-Action.xml"/>
+	
+	<!-- 稽核案件撤销 -->
+	<include file="com/wondersgroup/local/k3/f10301005/f10301005-Action.xml"/>
+	
+	<!-- 稽核结论登记 -->
+	<include file="com/wondersgroup/local/k3/f10301006/f10301006-Action.xml"/>
+	
+	<!-- 稽核结论确认 -->
+	<include file="com/wondersgroup/local/k3/f10301007/f10301007-Action.xml"/>
+	
+	<!-- 稽核结论传达 -->
+	<include file="com/wondersgroup/local/k3/f10301008/f10301008-Action.xml"/>
+	
+	<!-- 移交转办登记 -->
+	<include file="com/wondersgroup/local/k3/f10301009/f10301009-Action.xml"/>
+	
+	<!-- 立案审批 -->
+	<include file="com/wondersgroup/local/k3/f10301010/f10301010-Action.xml"/>
+	<!-- 案件确认审批-->
+	<include file="com/wondersgroup/local/k3/f10301011/f10301011-Action.xml"/>
+	<!-- 稽核案件结案-->
+	<include file="com/wondersgroup/local/k3/f10301014/f10301014-Action.xml"/>
+	<!-- 笔录询问录入 -->
+	<include file="com/wondersgroup/local/k3/f10301016/f10301016-Action.xml"/>
+	<!-- 稽核案件查询 -->
+	<include file="com/wondersgroup/local/k3/f10301015/f10301015-Action.xml"/>
+	<!-- 一级审批 -->
+	<include file="com/wondersgroup/local/k3/f10301017/f10301017-Action.xml"/>
+	<!-- 二级审批 -->
+	<include file="com/wondersgroup/local/k3/f10301018/f10301018-Action.xml"/>
+	<!-- 三级审批 -->
+	<include file="com/wondersgroup/local/k3/f10301019/f10301019-Action.xml"/>
+	<!-- 结论一级审批 -->
+	<include file="com/wondersgroup/local/k3/f10301020/f10301020-Action.xml"/>
+	<!-- 结论二级审批 -->
+	<include file="com/wondersgroup/local/k3/f10301021/f10301021-Action.xml"/>
+	<!-- 结论三级审批 -->
+	<include file="com/wondersgroup/local/k3/f10301022/f10301022-Action.xml"/>
+	<!-- 撤销一级审批 -->
+	<include file="com/wondersgroup/local/k3/f10301023/f10301023-Action.xml"/>
+	<!-- 撤销二级审批 -->
+	<include file="com/wondersgroup/local/k3/f10301024/f10301024-Action.xml"/>
+	<!-- 撤销三级审批 -->
+	<include file="com/wondersgroup/local/k3/f10301025/f10301025-Action.xml"/>
+	 
+</struts>
+

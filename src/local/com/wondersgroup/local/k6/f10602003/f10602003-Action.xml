@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k6/f10602003" extends="shyb-default" namespace="/k6/f10602003">
+		 <action name="index" class="linkAction">
+			<result name="success">/pages/k6/f10602003/f10602003.jsp</result>
+	    </action>
+	    
+	    <!-- 查询医师药品使用(图表) -->
+	    <action name="loadDoctDrugColum" class="queryDoctDrugAction" method="loadDoctDrugColumInfo"/>
+	    
+	    <!-- 查询医师药品 甲类 -->
+	    <action name="loadDoctDrugDisease" class="queryDoctDrugAction" method="loadDoctDrugDiseaseInfo"/>
+	    
+	    <!-- 查询医师药品 乙类 -->
+	    <action name="loadDoctDrugMedical" class="queryDoctDrugAction" method="loadDoctDrugMedicalInfo"/>
+	    
+	    <!-- 查询医师药品 丙类 -->
+	    <action name="loadDoctDrugIdentify" class="queryDoctDrugAction" method="loadDoctDrugIdentifyInfo"/>
+	    
+	</package>
+</struts>

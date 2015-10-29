@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>
+		Spring Configuration .
+	</description>
+	<!-- 方案管理 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10401001/f10401001-Context.xml"/>
+	<!-- 调度计划管理 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10401002/f10401002-Context.xml"/>
+	<!-- 调度日志管理 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10401003/f10401003-Context.xml"/>
+	<!-- 调度计划管理 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10402001/f10402001-Context.xml"/>
+	<!-- 规则模板管理 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10402001/f10402001-Context.xml"/>
+
+	
+	<!-- 规则维护 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10402005/f10402005-Context.xml"/>
+    <!-- 规则指标 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10402006/f10402006-Context.xml"/>
+	
+	<!-- 规则管理 -->
+	<!-- 监控规则定制 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10402002/f10402002-Context.xml"/>
+
+	
+	<!-- 分析规则定制 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10402003/f10402003-Context.xml"/>
+	
+	<!-- 阈值维护 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10402004/f10402004-Context.xml"/>
+	
+    <!-- 监控对象维护 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10402007/f10402007-Context.xml"/>
+	
+	<!-- 规则维护 -->
+	<import resource="classpath:com/wondersgroup/local/k4/f10402008/f10402008-Context.xml"/>
+</beans>

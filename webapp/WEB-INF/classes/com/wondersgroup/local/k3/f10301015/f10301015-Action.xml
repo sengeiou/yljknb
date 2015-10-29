@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k3/f10301015"  extends="shyb-default" namespace="/k3/f10301015">
+	    <action name="index" class="linkAction">
+			<result name="success">/pages/k3/f10301015/f10301015.jsp</result>
+	    </action>  
+		<!-- 稽核案件查询 -->
+		<action name="queryCaseInfo" class="f10301015Action" />
+		<!-- 外部受理疑点登记查询 -->
+		<action name="queryAuditTargetInfo" class="queryAuditTargetInfoAction"/>
+		<!-- 询问笔录生成 查询 -->
+		<action name="queryInquiryInputInfo" class="queryInquiryInputInfoAction"/>
+		
+	 </package>
+</struts>

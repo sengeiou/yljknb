@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k5/f10505001"  extends="shyb-default" namespace="/k5/f10505001">		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k5/f10505001/f10505001.jsp</result>
+	   </action>	
+	    <!-- 分页代医师申述的单据 -->
+	   <action name="queryMedDocument" class="docApplyAction" method="queryMedDocument"/>  
+	    <!-- 分页代医师申述的单据对应的明细 -->
+	   <action name="queryMedDocumentDetail" class="docApplyDetailAction" method="queryMedDocumentDetail"/>  
+	   <!-- 医师做放弃申诉操作 -->
+	   <action name="indexComplaintUpdateAction" class="docApplyDetailAction" method="updateComplaintHandlingKc62"/>  
+	   <!-- 医师申述处理记录 -->
+	   <action name="docSubmit" class="docSubmitAction" /> 
+	   <!-- 上传文件 -->
+	   <action name="upload" class="uploadAction" />   
+	     
+	</package>
+</struts>

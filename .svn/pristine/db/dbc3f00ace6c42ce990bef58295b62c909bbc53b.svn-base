@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k5/f10504003"  extends="shyb-default" namespace="/k5/f10504003">
+	  <action name="index" class="linkAction">
+			<result name="success">/pages/k5/f10504003/f10504003.jsp</result>
+	   </action>  
+	   <!-- 申诉查询 -->
+	   <action name="queryCompain" class="f10504003Action" method="queryCompainAction"></action>
+	   <!-- 医院汇总查询 -->
+	   <action name="queryNumber" class="f10504003Action" method="queryNumber"></action>
+	   
+	   <!-- 医院汇总查询 -->
+	   <action name="querySuspectedDocumentDetail" class="f10504003Action" method="querySuspectedDocumentDetail"></action>
+	</package>
+</struts>

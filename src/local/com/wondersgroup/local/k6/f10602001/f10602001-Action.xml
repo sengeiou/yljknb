@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k6/f10602001" extends="shyb-default" namespace="/k6/f10602001">
+	
+		 <action name="index" class="linkAction">
+			<result name="success">/pages/k6/f10602001/f10602001.jsp</result>
+	    </action>
+	    
+	    <!-- 查询医师图表数据 -->
+	    <action name="loadDoctExpenColum" class="queryDoctorExpenAction" method="loadDoctExpenColumInfo"/>
+	    
+	    <!-- 查询医师医疗类别 -->
+	    <action name="loadDoctMediCate" class="queryDoctorExpenAction" method="loadDoctMediCateInfo"/>
+	    
+	    <!-- 查询医师身份类别 -->
+	    <action name="loadDoctStatuCate" class="queryDoctorExpenAction" method="loadDoctStatuCateInfo"/>
+	    
+	    <!-- 查询医师疾病分类 -->
+	    <action name="loadDoctDiseCate" class="queryDoctorExpenAction" method="loadDoctDiseCateInfo"/>
+	    
+	    <!-- 查询医师就诊信息 -->
+	    <action name="loadDoctVisit" class="queryDoctorVisitAction" method="loadDoctVisitInfo"/>
+	    
+	    <!-- 查询医师处方信息 -->
+	    <action name="loadDoctPres" class="queryDoctorVisitAction" method="loadDoctPresInfo"/>
+	    
+	    <!-- 查询医师违规信息 -->
+	    <action name="loadDoctViola" class="queryDoctorVisitAction" method="loadDoctViolaInfo"/>
+	    
+	</package>
+</struts>

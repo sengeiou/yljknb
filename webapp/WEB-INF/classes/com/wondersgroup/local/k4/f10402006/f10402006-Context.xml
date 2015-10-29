@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10402006 Context</description>
+
+	<bean id="addRuleTargetAction"
+		class="com.wondersgroup.local.k4.f10402006.action.AddRuleTargetAction"
+		scope="prototype">
+	<description>添加规则指标</description>
+		<property name="f10402006VS" ref="f10402006VS"></property>
+	</bean>
+   
+   
+   	<bean id="queryRuleTargetAction"
+		class="com.wondersgroup.local.k4.f10402006.action.QueryRuleTargetAction"
+		scope="prototype">
+	<description>查询规则指标</description>
+		<property name="f10402006VS" ref="f10402006VS"></property>
+	</bean>
+	
+	   	<bean id="deleteRuleTargetAction"
+		class="com.wondersgroup.local.k4.f10402006.action.DeleteRuleTargetAction"
+		scope="prototype">
+	<description>删除规则指标</description>
+		<property name="f10402006VS" ref="f10402006VS"></property>
+	</bean>
+	
+	<!--  <bean id="queryCaseNumberTargetAction"
+		class="com.wondersgroup.local.k4.f10402006.action.QueryCaseNumberTargetAction"
+		scope="prototype">
+	<description>根据ID加载修改信息</description>
+		<property name="f10402006VS" ref="f10402006VS"></property>
+	</bean> -->
+	
+	<bean id="ruleTargetDataAction"
+		class="com.wondersgroup.local.k4.f10402006.action.RuleTargetDataAction"
+		scope="prototype">
+	<description> 加载数据(登陆用户,当前时间)</description>
+	</bean>
+	
+ 	<bean id="backJsonAction"
+		class="com.wondersgroup.local.k4.f10402006.action.BackJsonAction"
+		scope="prototype">
+	<description> 返回规则名称列的值</description>
+	<property name="f10402006VS" ref="f10402006VS"></property>
+	</bean>
+	
+
+	<bean id="f10402006VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10402006.vs.impl.F10402006VSImpl">
+			<property name="ruleManageBS" ref="ruleManageBS"></property>
+			</bean>
+		</property>
+</bean>
+
+</beans>

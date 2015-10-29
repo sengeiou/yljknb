@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10201003 Context</description>
+    
+    <bean id="medDocumentCheckOperateAction"
+		  class="com.wondersgroup.local.k2.f10201003.action.MedDocumentCheckOperateAction"
+		  scope="prototype">
+		  <description>医保单据复审操作</description>
+		  <property name="f10201003VS" ref="f10201003VS"></property>
+	</bean>
+	
+	<bean id="medDocumentDetailCheckOperateAction"
+		  class="com.wondersgroup.local.k2.f10201003.action.MedDocumentDetailCheckOperateAction"
+		  scope="prototype">
+		  <description>医保单据明细复审操作</description>
+		  <property name="f10201003VS" ref="f10201003VS"></property>
+	</bean>
+	
+	<bean id="medInteractiveAction"
+		  class="com.wondersgroup.local.k2.f10201003.action.MedInteractiveAction"
+		  scope="prototype">
+		  <description>交互信息查询</description>
+		  <property name="f10201003VS" ref="f10201003VS"></property>
+	</bean>
+	
+	<bean id="f10201003VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k2.f10201003.vs.impl.F10201003VSImpl">
+				<property name="medAuditBS" ref="medAuditBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

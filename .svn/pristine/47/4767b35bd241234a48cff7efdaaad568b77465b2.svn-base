@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10504003 Context</description>
+	 <bean id="f10504003Action" class="com.wondersgroup.local.k5.f10504003.action.F10504003Action" scope="prototype">
+	 	<description>申诉查询</description>
+	 	<property name="f10504003VS" ref="f10504003VS"></property>
+	 </bean>
+	 
+	 <bean id="f10504003VS" class="com.wondersgroup.local.k5.f10504003.vs.impl.F10504003VSImpl">
+	 	<property name="f10504003BS"  ref="f10504003Bs"></property>
+	 </bean>
+	
+</beans>

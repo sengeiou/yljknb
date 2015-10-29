@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10203001 Context</description>
+
+	<bean id="f10203001Action"
+		class="com.wondersgroup.local.k2.f10203001.action.F10203001Action"
+		scope="prototype">
+		<description>人工初审Action</description>
+		<property name="f10203001VS" ref="f10203001VS"></property>
+	</bean>
+	
+	<bean id="MedDocumentOperateAction"
+		class="com.wondersgroup.local.k2.f10203001.action.MedDocumentOperateAction"
+		scope="prototype">
+		<description>查询违规明细Action</description>
+		<property name="f10203001VS" ref="f10203001VS"></property>
+	</bean>
+
+
+	<bean id="f10203001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k2.f10203001.vs.impl.F10203001VSImpl">
+				<property name="f10203001BS" ref="f10203001BS"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="queryHosAction3001"
+		class="com.wondersgroup.local.k2.f10203001.action.QueryHosAction"
+		scope="prototype">
+		<description>医院汇总查询Action</description>
+		<property name="f10203001VS" ref="f10203001VS"></property>
+	</bean>
+
+</beans>

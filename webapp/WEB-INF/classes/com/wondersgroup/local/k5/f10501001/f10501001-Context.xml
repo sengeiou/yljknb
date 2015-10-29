@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10501001 Context</description>
+    
+    <bean id="medDocumentFeedbackOperateAction"
+		  class="com.wondersgroup.local.k5.f10501001.action.MedDocumentFeedbackOperateAction"
+		  scope="prototype">
+		  <description>医保单据反馈操作</description>
+		  <property name="f10501001VS" ref="f10501001VS"></property>
+	</bean>
+	
+	<bean id="medDocumentDetailFeedbackOperateAction"
+		  class="com.wondersgroup.local.k5.f10501001.action.MedDocumentDetailFeedbackOperateAction"
+		  scope="prototype">
+		  <description>医保单据明细反馈操作</description>
+		  <property name="f10501001VS" ref="f10501001VS"></property>
+	</bean>
+	
+	<bean id="f10501001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10501001.vs.impl.F10501001VSImpl">
+				<property name="medAuditBS" ref="medAuditBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

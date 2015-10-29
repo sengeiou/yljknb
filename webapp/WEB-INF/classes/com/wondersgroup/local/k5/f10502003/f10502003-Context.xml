@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10502003 Context</description>
+
+	<bean id="queryKf65MessageAction"
+		class="com.wondersgroup.local.k5.f10502003.action.QueryKf65MessageAction"
+		scope="prototype">
+	<description>查询kf65</description>
+		<property name="f10502003VS" ref="f10502003VS"></property>
+	</bean>
+	
+	<bean id="saveKf65MessageAction"
+		class="com.wondersgroup.local.k5.f10502003.action.SaveKf65MessageAction"
+		scope="prototype">
+	<description>保存kf65</description>
+		<property name="f10502003VS" ref="f10502003VS"></property>
+	</bean>
+
+
+	<bean id="queryKf05MessageAction"
+		class="com.wondersgroup.local.k5.f10502003.action.QueryKf05MessageAction"
+		scope="prototype">
+	<description>查询kf65通过信息</description>
+		<property name="f10502003VS" ref="f10502003VS"></property>
+	</bean>
+	
+	
+	<bean id="loadUpdateMessageAction"
+		class="com.wondersgroup.local.k5.f10502003.action.LoadUpdateMessageAction"
+		scope="prototype">
+	<description>查询kf65通过信息</description>
+		<property name="f10502003VS" ref="f10502003VS"></property>
+	</bean>
+	
+	
+
+	<bean id="deleteKf05MessageAction"
+		class="com.wondersgroup.local.k5.f10502003.action.DeleteKf05MessageAction"
+		scope="prototype">
+		<property name="f10502003VS" ref="f10502003VS"></property>
+	</bean>
+	
+<bean id="updateKf65MessageAction"
+		class="com.wondersgroup.local.k5.f10502003.action.UpdateKf65MessageAction"
+		scope="prototype">
+		<property name="f10502003VS" ref="f10502003VS"></property>
+	</bean>	
+	
+	<bean id="f10502003VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10502003.vs.impl.F10502003VSImpl">
+				<property name="auditComplaintBS" ref="auditComplaintBS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

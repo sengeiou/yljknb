@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k3/f10301020"  extends="shyb-default" namespace="/k3/f10301020">
+	    <action name="index" class="linkAction">
+			<result name="success">/pages/k3/f10301020/f10301020.jsp</result>
+	    </action>  
+
+		<action name="queryApprovalData" class="f10301020Action"/>	
+		
+		<action name="operateApproval" class="f10301020Action" method="operateApproval"  />
+			
+		<action name="jumpOut" class="f10301020Action" method="jumpOut"></action>
+	 </package>
+</struts>

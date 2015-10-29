@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10603006 Context</description>
+	
+	<bean id="queryMediFeeTrendAction"
+		class="com.wondersgroup.local.k6.f10603006.action.QueryMediFeeTrendAction"
+		scope="prototype">
+		<description></description>
+		<property name="f10603006VS" ref="f10603006VS"></property>
+	</bean>
+	
+	<bean id="f10603006VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k6.f10603006.vs.impl.F10603006VSImpl">
+				<property name="statisticBS" ref="statisticBS"></property>
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>
+		Spring Configuration of Common Component Library - Business
+		Components.
+	</description>
+
+	<bean id="sqApplyBS"
+		class="com.wondersgroup.bc.sqapplydis.sqlapply.bs.impl.SqApplyBSImpl">
+	</bean>
+
+	
+	<bean
+		class="com.wondersgroup.bc.sqapplydis.sqlapply.mapping.MappingUtils">
+		<property name="columnConverter">
+			<bean
+				class="com.wondersgroup.bc.sqapplydis.sqlapply.mapping.converter.SimpleColumnConverterImpl">
+			</bean>
+		</property>
+		<property name="columnMapFactory">
+			<bean
+				class="com.wondersgroup.bc.sqapplydis.sqlapply.mapping.annotation.ColumnMapFactoryAnnotationImpl">
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

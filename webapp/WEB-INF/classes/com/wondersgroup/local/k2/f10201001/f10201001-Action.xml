@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k2/f10201001"  extends="shyb-default" namespace="/k2/f10201001">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k2/f10201001/f10201001.jsp</result>
+	   </action>
+	   
+	   
+	   <!--智能审核概况查看 统计查询 -->
+	   <action name="queryF10201001" class="f10201001QueryAction" method="queryF10201001"></action>
+	   
+	   <!--查询医疗机构的统计情况-->
+	   <action name="queryF10201001WithYljg" class="f10201001QueryAction" method="queryF10201001WithYljg"></action>
+	   
+	   <!--查询规则的统计情况 -->
+	   <action name="queryF10201001WithGz" class="f10201001QueryAction" method="queryF10201001WithGz"></action>
+	</package>
+</struts>

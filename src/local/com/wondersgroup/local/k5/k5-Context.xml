@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>
+		Spring Configuration .
+	</description>
+
+	<!-- 单据查询及反馈 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10501001/f10501001-Context.xml"/>
+	<!-- 单据扣款申诉 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10501002/f10501002-Context.xml"/>
+	
+	<!-- 稽核申诉 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10503001/f10503001-Context.xml"/>
+	<!-- 稽核申诉查询 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10503002/f10503002-Context.xml"/>
+	<!-- 申诉审批 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10503003/f10503003-Context.xml"/>
+	<!-- 申诉统计 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10503004/f10503004-Context.xml"/>
+	<!-- 医疗机构服务信息 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10502001/f10502001-Context.xml"/>
+	
+	<!-- 科室信息 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10502002/f10502002-Context.xml"/>
+	
+	<!-- 医护人员信息 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10502003/f10502003-Context.xml"/>
+	
+	<!-- 维护信息审核 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10502004/f10502004-Context.xml"/>
+	<!-- 复议申请 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10507001/f10507001-Context.xml"/>
+	
+	<!-- 医保办 申诉处理 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10504001/f10504001-Context.xml"/>
+	<!-- 医保办 申诉审核 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10504002/f10504002-Context.xml"/>
+	<!-- 医保办 申诉查询 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10504003/f10504003-Context.xml"/>
+
+	<!-- 医师申述 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10505001/f10505001-Context.xml"/>
+	<!-- 医师查询-->
+	<import resource="classpath:com/wondersgroup/local/k5/f10505002/f10505002-Context.xml"/>
+	
+	<!-- 复议处理 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10506001/f10506001-Context.xml"/>
+	
+	<!-- 复议申请审核 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10506002/f10506002-Context.xml"/>
+	
+	<!-- 复议查询 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10506003/f10506003-Context.xml"/>
+	
+	<!-- 医师复议查询 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10507002/f10507002-Context.xml"/>
+	<!-- 综合查询 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10508001/f10508001-Context.xml"/>
+	
+	<!-- 单病种申诉 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10509001/f10509001-Context.xml"/>
+	<!-- 单病种查询 -->
+	<import resource="classpath:com/wondersgroup/local/k5/f10510001/f10510001-Context.xml"/>
+	
+</beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	
+	<package name="/k3/f10301009" extends="shyb-default" namespace="/k3/f10301009">
+		
+		<!-- 查询 转办案件 -->
+		<action name="queryCaseTransTurn" class="queryCaseTransTurnAction"/>
+		
+		<!-- 根据编号abz001 查询案件信息 -->
+		<action name="loadTurnCaseByAbz001" class="queryCaseTransTurnAction" method="loadTurnCaseInfoByAbz001"/>
+		
+		<!-- 根据编号aaz318 查询被稽核对象 -->
+		<action name="loadTurnBeAuditByAaz318" class="queryCaseTransTurnAction" method="loadTurnBeAuditInfoByAaz318"/>
+		
+		<!-- 保存移交信息 -->
+		<action name="saveTurnMessage" class="saveTurnMessageAction"/>
+		
+	</package>
+	
+</struts>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+		<package name="/k4/f10401003" extends="shyb-default" namespace="/k4/f10401003">
+	
+	    <!-- 分页查询调度计划信息-->
+		 <action name="queryPlan" class="queryPlanAction" />
+		 <!-- 启动调度计划-->
+		<action name="queryTask" class="queryTaskAction" />
+		
+		</package>
+		
+</struts>

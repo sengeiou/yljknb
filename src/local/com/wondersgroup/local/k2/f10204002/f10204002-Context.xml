@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10204002 Context</description>
+
+	<bean id="f10204002Action"
+		class="com.wondersgroup.local.k2.f10204002.action.F10204002Action"
+		scope="prototype">
+		<description>医保单据主动复议操作</description>
+		<property name="f10204002VS" ref="f10204002VS"></property>
+	</bean>
+
+	<bean id="f10204002DetailAction"
+		class="com.wondersgroup.local.k2.f10204002.action.F10204002DetailAction"
+		scope="prototype">
+		<description>医保单据明细主动复议操作</description>
+		<property name="f10204002VS" ref="f10204002VS"></property>
+	</bean>
+	
+	<bean id="uploadAction"
+		class="com.wondersgroup.local.k2.f10204002.action.UploadAction"
+		scope="prototype">
+		<description>医保单据明细主动复议上传附件操作</description>
+		<property name="f10204002VS" ref="f10204002VS"></property>
+	</bean>
+
+	<bean id="f10204002VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k2.f10204002.vs.impl.F10204002VSImpl">
+				<property name="f10204002BS" ref="f10204002BS"></property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+</beans>

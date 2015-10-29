@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k5/f10504001"  extends="shyb-default" namespace="/k5/f10504001">
+	  <action name="index" class="linkAction">
+			<result name="success">/pages/k5/f10504001/f10504001.jsp</result>
+	   </action>  
+	   
+	    <action name="indexAction" class="f10504001Action" method="queryComplaintHandling" />
+	    <action name="indexDetailAction" class="f10504001Action" method="queryComplaintHandlingDetail" />
+	    
+	    <action name="indexInfoAction" class="f10504001InfoAction" method="queryComplaintHandlingPage" /> 
+	    <action name="indexInfoDetailAction" class="f10504001InfoAction" method="queryComplaintHandlingInfoDetail" />
+	    
+	    <action name="indexComplaintUpdateAction" class="f10504001InfoAction" method="updateComplaintHandlingKc62"/>
+	    
+	    <!-- 直接申诉 -->
+	    <action name="preCheckZjss" class="f10504001InfoAction" method="preCheckZjss"></action>
+	    
+	    <!-- 医院汇总 -->
+	    <action name="queryNumber" class="queryNumberAction"></action>
+	     <!-- 导出Excel -->
+	    <action name="f04exportExcel" class="f04exportExcelAction" />
+	</package>
+</struts>

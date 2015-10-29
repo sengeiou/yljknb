@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10402002 Context</description>
+	
+	<bean id="updateRuleAae100Action"
+		class="com.wondersgroup.local.k4.f10402002.action.UpdateRuleAae100Action"
+		scope="prototype">
+		<description>启用规则</description>
+		<property name="f10402002VS" ref="f10402002VS"></property>
+	</bean>
+	
+     <bean id="queryRuleListAction"
+		class="com.wondersgroup.local.k4.f10402002.action.QueryRuleAction"
+		scope="prototype">
+		<description>分页查询规则</description>
+		<property name="f10402002VS" ref="f10402002VS"></property>
+	</bean>
+	
+	 <bean id="createAaa168Action"
+		class="com.wondersgroup.local.k4.f10402002.action.CreateAaa168Action"
+		scope="prototype">
+		<description>生成Aaa168</description>
+		<property name="f10402002VS" ref="f10402002VS"></property>
+	</bean>
+	
+	<bean id="updateRuleAction"
+		class="com.wondersgroup.local.k4.f10402002.action.UpdataRuleAction"
+		scope="prototype">
+		<description>更新规则</description>
+		<property name="f10402002VS" ref="f10402002VS"></property>
+	</bean>
+	
+	<bean id="initRuleDataAction"
+		class="com.wondersgroup.local.k4.f10402002.action.InitRuleDataAction"
+		scope="prototype">
+		<description>添加页面初始化规则数据</description>
+	</bean>
+	
+	<bean id="loadRuleAction"
+		class="com.wondersgroup.local.k4.f10402002.action.LoadRuleAction"
+		scope="prototype">
+		<description>根据ID加载数据</description>
+		<property name="f10402002VS" ref="f10402002VS"></property>
+	</bean>
+	
+	<bean id="saveRuleAction"
+		class="com.wondersgroup.local.k4.f10402002.action.SaveRuleAction"
+		scope="prototype">
+		<description>保存规则</description>
+		<property name="f10402002VS" ref="f10402002VS"></property>
+	</bean>
+	
+	<bean id="f10402002VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10402002.vs.impl.F10402002VSImpl">
+				<property name="ruleManageBS" ref="ruleManageBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>复议审核</description>
+
+		<import resource="classpath:com/wondersgroup/bc/k2/f10204001/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k2/f10204002/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k2/f10204003/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k2/f10203002/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k2/f10203001/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k2/f10203003/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k2/f10202003/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k2/f10202004/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k2/f10205001/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k2/f10206001/componentContext.xml" />
+</beans>

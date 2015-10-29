@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k3/f10301011"  extends="shyb-default" namespace="/k3/f10301011">
+	  <action name="index" class="linkAction">
+			<result name="success">/pages/k3/f10301011/f10301011.jsp</result>
+	   </action>  
+	   <action name="queryRecheckDetail" class="f10301011Action" method="queryRecheckDetail" />
+	   <action name="queryRegisterDetail" class="f10301011Action" method="queryRegisterAction" />
+	   <action name="operateCaseInfo" class="stateCheckAction3" method="operateCaseInfo" />
+	   <action name="queryApprovalData" class="stateCheckAction3"  />
+	   <action name="operateApproval" class="stateCheckAction3" method="operateApproval"  />
+	   	<!-- 查询案件 -->
+		<action name="queryCaseInfo" class="queryCaseInfoAction"/>
+		<!-- 根据传入对象查询案件信息 -->
+		<action name="loadAuditCaseByAbz001" class="queryCaseInfoAction" method="loadAuditCaseInfoByAbz001" />
+		
+		<!-- 查询AF31信息 -->
+		<action name="loadAuditTargetByAaz318" class="f10301011Action" method="loadAuditTargetInfoByAaz318"></action>
+	 </package>
+</struts>

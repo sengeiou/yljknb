@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10301011 Context</description>
+	
+	<bean id="f10301022Action" class="com.wondersgroup.local.k3.f10301022.action.F10301022Action" scope="prototype">
+		<description>结论登记一级审批</description>
+		<property name="f10301022vs" ref="f10301022VS"></property>
+	</bean>
+		
+	<bean id="f10301022VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301022.vs.impl.F10301022VSImpl">
+				<property name="f10301022bs" ref="f10301022BS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

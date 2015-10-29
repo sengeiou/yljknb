@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k4/f10402002" extends="shyb-default" namespace="/k4/f10402002">
+	
+		<!-- 分页查询规则 -->
+		<action name="queryRuleList" class="queryRuleListAction"/>
+		
+		<!-- 添加页面初始化规则数据 -->
+		<action name="initRuleData" class="initRuleDataAction"/>
+		
+		<!-- 保存规则 -->
+		<action name="saveRule" class="saveRuleAction"/>
+		
+		<!-- 生成Aaa168 -->
+		<action name="createAaa168" class="createAaa168Action"/>
+		
+		<!-- 根据ID加载数据 -->
+		<action name="loadRule" class="loadRuleAction"/>
+		
+		<!-- 修改规则 -->
+		<action name="updateRule" class="updateRuleAction"/>
+		
+		<!-- 启用规则 -->
+		<action name="updateRuleAae100" class="updateRuleAae100Action"/>
+	</package>		  
+</struts>

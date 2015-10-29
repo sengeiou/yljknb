@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10509001 Context</description>
+
+	<bean id="f10509001Action"
+		class="com.wondersgroup.local.k5.f10509001.action.F10509001Action"
+		scope="prototype">
+		<description>医保单据复议操作</description>
+		<property name="f10509001VS" ref="f10509001VS"></property>
+	</bean>
+
+	<bean id="uploadAction" class="com.wondersgroup.local.k5.f10509001.action.UploadAction"
+		scope="prototype">
+		<description>医保单据明细主动复议上传附件操作</description>
+		<property name="f10509001VS" ref="f10509001VS"></property>
+	</bean>
+
+	<bean id="f10509001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10509001.vs.impl.F10509001VSImpl">
+				<property name="f10509001BS" ref="f10509001BS"></property>
+			</bean>
+		</property>
+	</bean>
+
+
+</beans>

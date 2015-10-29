@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k2/f10203001"  extends="shyb-default" namespace="/k2/f10203001">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k2/f10203001/f10203001.jsp</result>
+	   </action>
+	   <action name="getChartSZJ" class="f10203001Action" method="getChartSZJ"/>
+	   <!-- 查询单据明细统计信息 -->
+	   <action name="queryMedDocumentDetail" class="f10203001Action" method="queryMedDocumentDetail"/>
+	   <!-- 分页查询违规单据(带人工初审)统计信息 -->
+	   <action name="queryMedDocument" class="f10203001Action" method="queryMedDocument"/>
+	    <!-- 申诉审核批量操作 -->
+	   <action name="medDocumentDetailOperate" class="f10203001Action" method="medDocumentDetailOperate" />
+	   <!-- 申诉审核单个操作 -->
+	   <action name="medDocumentDetailOperateSingle" class="f10203001Action" method="medDocumentDetailOperateSingle" />
+	    <!-- 查询单据明细统计信息的明细违规信息 -->
+	   <action name="queryMedDocumentDetailIllegal" class="MedDocumentOperateAction"
+			method="queryMedDocumentDetailIllegal"></action>
+		<!-- 医院的统计信息 -->
+		<action name="queryMedDocumentByHos" class="queryHosAction3001" method="queryMedDocumentByHos"/>	
+	    
+	</package>
+</struts>

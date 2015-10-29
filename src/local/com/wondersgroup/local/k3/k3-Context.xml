@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>
+		Spring Configuration .
+	</description>
+
+	<!-- 外部疑点受理登记 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301001/f10301001-Context.xml"/>
+	
+	<!-- 查询稽核立案登记 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301002/f10301002-Context.xml"/>
+	
+	<!-- 稽核立案确认 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301003/f10301003-Context.xml"/>
+	
+	<!-- 稽核调查登记 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301004/f10301004-Context.xml"/>
+	
+	<!-- 稽核案件撤销 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301005/f10301005-Context.xml"/>
+	
+	<!-- 稽核结论登记 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301006/f10301006-Context.xml"/>
+	
+	<!-- 稽核结论确认 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301007/f10301007-Context.xml"/>
+	
+	<!-- 稽核结论传达 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301008/f10301008-Context.xml"/>
+	
+	<!-- 移交转办登记 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301009/f10301009-Context.xml"/>
+	
+ 	<!-- 立案审批 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301010/f10301010-Context.xml"/>
+	
+	<!-- 移交转办登记 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301011/f10301011-Context.xml"/>
+	<!-- 稽核案件结案 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301014/f10301014-Context.xml"/>
+	
+	<!-- 笔录询问录入 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301016/f10301016-Context.xml"/>
+	
+	<!-- 稽核案件查询 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301015/f10301015-Context.xml"/>
+	
+	<!-- 一级审批 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301017/f10301017-Context.xml"/>
+	
+	<!-- 二级审批 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301018/f10301018-Context.xml"/>
+	
+	<!-- 三级审批 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301019/f10301019-Context.xml"/>
+	
+	<!-- 结论一级审批 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301020/f10301020-Context.xml"/>
+	
+	<!-- 结论二级审批 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301021/f10301021-Context.xml"/>
+	
+	<!-- 结论三级审批 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301022/f10301022-Context.xml"/>
+	
+	<!-- 撤销一级审批 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301023/f10301023-Context.xml"/>
+	
+	<!-- 撤销二级审批 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301024/f10301024-Context.xml"/>
+	
+	<!-- 撤销三级审批 -->
+	<import resource="classpath:com/wondersgroup/local/k3/f10301025/f10301025-Context.xml"/>
+	
+</beans>

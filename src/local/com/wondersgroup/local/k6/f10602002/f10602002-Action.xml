@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k6/f10602002" extends="shyb-default" namespace="/k6/f10602002">
+		 <action name="index" class="linkAction">
+			<result name="success">/pages/k6/f10602002/f10602002.jsp</result>
+	    </action>
+	    <action name="queryInvoice" class="doctCataAction" method="queryInvoice"></action>
+	    <action name="queryCharge" class="doctCataAction" method="queryCharge"></action>
+	    <action name="queryDoctRank" class="doctCataAction" method="queryDoctRank"></action>
+	</package>
+</struts>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10301015 Context</description>
+	
+	<bean id="f10301015Action" class="com.wondersgroup.local.k3.f10301015.action.F10301015Action" scope="prototype">
+		  <description>稽核案件查询</description>
+		  <property name="f10301015VS" ref="f10301015VS"></property>
+	</bean>
+	
+	<bean id="queryAuditTargetInfoAction" class="com.wondersgroup.local.k3.f10301015.action.QueryAuditTargetInfoAction" scope="prototype">
+		  <description>外部受理疑点登记查询</description>
+		  <property name="f10301015VS" ref="f10301015VS"></property>
+	</bean>
+	
+	<bean id="queryInquiryInputInfoAction" class="com.wondersgroup.local.k3.f10301015.action.QueryInquiryInputInfoAction" scope="prototype">
+		  <description>询问笔录生成 查询</description>
+		  <property name="f10301015VS" ref="f10301015VS"></property>
+	</bean>
+	
+	<bean id="f10301015VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301015.vs.impl.F10301015VSImpl">
+				<property name="f10301015BS" ref="f10301015BS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

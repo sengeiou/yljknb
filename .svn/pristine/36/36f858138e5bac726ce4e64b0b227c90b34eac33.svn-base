@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<description>f10301008 Context</description>
+	
+	<bean id="queryConveyAction"
+		  class="com.wondersgroup.local.k3.f10301008.action.QueryConveyAction"
+		  singleton="false">
+		  <description>稽核结论确认查询</description>
+		  <property name="f10301008VS" ref="f10301008VS"></property>
+	</bean>
+	
+	<bean id="saveConveyRecordAction"
+		  class="com.wondersgroup.local.k3.f10301008.action.SaveConveyRecordAction"
+		  singleton="false">
+		  <description>保存稽核结论</description>
+		  <property name="f10301008VS" ref="f10301008VS"></property>
+	</bean>
+	
+	<bean id="queryConveyRecordAction"
+		  class="com.wondersgroup.local.k3.f10301008.action.QueryConveyRecordAction"
+		  singleton="false">
+		  <description>查询稽核传达记录</description>
+		  <property name="f10301008VS" ref="f10301008VS"></property>
+	</bean>
+	
+	<bean id="deleteConveyRecordAction"
+		  class="com.wondersgroup.local.k3.f10301008.action.DeleteConveyRecordAction"
+		  singleton="false">
+		  <description>查询稽核传达记录</description>
+		  <property name="f10301008VS" ref="f10301008VS"></property>
+	</bean>
+	
+	<bean id="notifyFinishAction"
+		  class="com.wondersgroup.local.k3.f10301008.action.NotifyFinishAction"
+		  singleton="false">
+		  <description>告知终结</description>
+		  <property name="f10301008VS" ref="f10301008VS"></property>
+	</bean>
+	
+	<bean id="queryDetailsAction" class="com.wondersgroup.local.k3.f10301008.action.QueryDetailsAction" singleton="false">
+		<description>查询AF38</description>
+		<property name="f10301008VS" ref="f10301008VS"></property>
+	</bean>
+	
+
+	<bean id="converAction" class="com.wondersgroup.local.k3.f10301008.action.ConverAction" singleton="false">
+		<description>传达</description>
+		  <property name="f10301008vs" ref="f10301008VS"></property>
+	</bean>
+	
+	<bean id="caseMoveAction" class="com.wondersgroup.local.k3.f10301008.action.CaseMoveAction" singleton="false">
+		<description>案件移交</description>
+		  <property name="f10301008vs" ref="f10301008VS"></property>
+	</bean>
+	
+	<bean id="changeOfTimeAction" class="com.wondersgroup.local.k3.f10301008.action.ChangeOfTime" singleton="false">
+		<description>限期修改</description>
+		<property name="f10301008vs" ref="f10301008VS"></property>
+	</bean>
+	
+	<bean id="recoveryAction" class="com.wondersgroup.local.k3.f10301008.action.RecoveryAction" singleton="false">
+		<description>恢复医疗保险待遇</description>
+		<property name="f10301008vs" ref="f10301008VS"></property>
+	</bean>
+	
+	<bean id="returnProveAction" class="com.wondersgroup.local.k3.f10301008.action.ReturnProveAction" singleton="false">
+		<description>送达回证</description>
+		<property name="f10301008vs" ref="f10301008VS"></property>
+	</bean>
+	
+	<bean id="f10301008VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301008.vs.impl.F10301008VSImpl">
+				<property name="adminDisposalBS" ref="adminDisposalBS"></property>
+				<property name="f10301008BS" ref="f10301008BS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

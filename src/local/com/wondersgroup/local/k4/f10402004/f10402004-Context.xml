@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10402004 Context</description>
+	
+	<bean id="queryRuleAaa153Action"
+		class="com.wondersgroup.local.k4.f10402004.action.QueryRuleAaa153Action"
+		scope="prototype">
+		<description>分页规则监控类型</description>
+		<property name="f10402004VS" ref="f10402004VS"></property>
+	</bean>
+	
+	<bean id="deleteThresholdAction"
+		class="com.wondersgroup.local.k4.f10402004.action.DeleteThresholdAction"
+		scope="prototype">
+		<description>删除阈值</description>
+		<property name="f10402004VS" ref="f10402004VS"></property>
+	</bean>
+	
+	<bean id="updateThresholdAction"
+		class="com.wondersgroup.local.k4.f10402004.action.UpdateThresholdAction"
+		scope="prototype">
+		<description>修改阈值</description>
+		<property name="f10402004VS" ref="f10402004VS"></property>
+	</bean>
+	
+	<bean id="loadThresholdAction"
+		class="com.wondersgroup.local.k4.f10402004.action.LoadThresholdAction"
+		scope="prototype">
+		<description>加载单个阈值</description>
+		<property name="f10402004VS" ref="f10402004VS"></property>
+	</bean>
+	
+	<bean id="queryThresholdAction"
+		class="com.wondersgroup.local.k4.f10402004.action.QueryThresholdAction"
+		scope="prototype">
+		<description>分页查询阈值</description>
+		<property name="f10402004VS" ref="f10402004VS"></property>
+	</bean>
+	
+	<bean id="queryRuleByAaa153Action"
+		class="com.wondersgroup.local.k4.f10402004.action.QueryRuleByAaa153Action"
+		scope="prototype">
+		<description>根据监控类型分页查询规则</description>
+		<property name="f10402004VS" ref="f10402004VS"></property>
+	</bean>
+	
+	<bean id="saveThresholdAction"
+		class="com.wondersgroup.local.k4.f10402004.action.SaveThresholdAction"
+		scope="prototype">
+		<description>保存阈值</description>
+		<property name="f10402004VS" ref="f10402004VS"></property>
+	</bean>
+	
+	<bean id="f10402004VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10402004.vs.impl.F10402004VSImpl">
+				<property name="ruleManageBS" ref="ruleManageBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

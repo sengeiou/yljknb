@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10202002 Context</description>
+
+	<bean id="auditResultsQueryAction"
+		class="com.wondersgroup.local.k2.f10202002.action.AuditResultsQueryAction"
+		scope="prototype">
+		<description>费用审核汇总查询</description>
+		<property name="f10202002VS" ref="f10202002VS"></property>
+	</bean>
+
+
+	<bean id="f10202002VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k2.f10202002.vs.impl.F10202002VSImpl">
+				<property name="medAuditBS" ref="medAuditBS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

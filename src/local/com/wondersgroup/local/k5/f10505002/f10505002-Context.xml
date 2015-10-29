@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10505002 Context</description>
+    
+   	
+	<bean id="f10505002Action"
+		  class="com.wondersgroup.local.k5.f10505002.action.F10505002Action"
+		  scope="prototype">
+		  <property name="f10505002VS" ref="f10505002VS"></property>
+	</bean>
+	
+	<bean id="f10505002VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10505002.vs.impl.F10505002VSImpl">
+				<property name="docAfterBS" ref="docAfterBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

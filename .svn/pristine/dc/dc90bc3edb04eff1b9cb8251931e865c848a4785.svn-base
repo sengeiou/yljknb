@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k4/f10402008" extends="shyb-default" namespace="/k4/f10402008">
+		<action name="getGzfl" class="f10402008Action" method="getGzlb"/>
+		<action name="getGzflxx" class="f10402008Action" method="getGzflxx"/>
+		<action name="queryZsdWithPage" class="f10402008Action" method="queryZsdWithPage"/>
+		<action name="loadZsdxx" class="f10402008Action" method="loadZsdxx"/>
+		<action name="queryLjtjWithPage" class="f10402008Action" method="queryLjtjWithPage"/>
+		<action name="queryLjsjWithPage" class="f10402008Action" method="queryLjsjWithPage"/>
+		<action name="saveSjnr" class="f10402008Action" method="saveSjnr"/>
+		<action name="updateZsdmx" class="f10402008Action" method="updateZsdmx"/>
+		<action name="startOrEnd" class="f10402008Action" method="startOrEnd"/>
+	</package>		  
+</struts>

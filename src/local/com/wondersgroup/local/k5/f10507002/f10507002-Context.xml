@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10507002 Context</description>
+
+	<bean id="f10507002Action"
+		class="com.wondersgroup.local.k5.f10507002.action.F10507002Action"
+		scope="prototype">
+		<description>审核查询Action</description>
+		<property name="f10507002VS" ref="f10507002VS"></property>
+	</bean>
+	
+	<bean id="queryHosAction7002"
+		class="com.wondersgroup.local.k5.f10507002.action.QueryHosAction"
+		scope="prototype">
+		<description>医院查询Action</description>
+		<property name="f10507002VS" ref="f10507002VS"></property>
+	</bean>
+	
+
+	<bean id="f10507002VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10507002.vs.impl.F10507002VSImpl">
+				<property name="f10507002BS" ref="f10507002BS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

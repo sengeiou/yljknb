@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<description>f10301005 Context</description>
+	
+	<bean id="desRegisterAction"
+		  class="com.wondersgroup.local.k3.f10301005.action.DesRegisterAction"
+		  singleton="false">
+		  <description>稽核案件查询</description>
+		  <property name="f10301005VS" ref="f10301005VS"></property>
+	</bean>
+	
+	<bean id="queryUndoCaseAction"
+		  class="com.wondersgroup.local.k3.f10301005.action.QueryUndoCaseAction"
+		  singleton="false">
+		  <description>撤销案件查询</description>
+		  <property name="f10301005VS" ref="f10301005VS"></property>
+	</bean>
+	
+	
+	
+	<bean id="f10301005VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301005.vs.impl.F10301005VSImpl">
+				<property name="adminDisposalBS" ref="adminDisposalBS"></property>
+				<property name="f10301005BS" ref="f10301005BS"></property>
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

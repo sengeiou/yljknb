@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<!-- SQL dialect for generate.pojo and ddl-->
+	<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+	<!-- jdbc properties for generate.pojo -->
+	<property name="hibernate.connection.driver_class">
+		oracle.jdbc.driver.OracleDriver
+	</property>
+	<property name="hibernate.connection.url">
+		 jdbc:oracle:thin:@//127.0.0.1:1521/ylfwjk
+	</property>
+	<property name="hibernate.connection.username">ylfwjknb</property>
+	<property name="hibernate.connection.password">ylfwjknb</property>
+	<!-- pojos for  generate.code -->
+
+</session-factory>
+</hibernate-configuration>

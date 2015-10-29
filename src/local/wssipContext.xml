@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<description>
+		一体化平台WSSIP Spring基础配置
+	</description>
+
+	<!-- =================================================================== -->
+	<!-- 公用构件资源接入 -->
+	<!-- =================================================================== -->
+	<bean id="defaultDialect" class="org.hibernate.dialect.Oracle10gDialect">
+		<description>默认方言，用于Spring Jdbc分页查询</description>
+	</bean>
+	<!-- 分页查询构件 核心库 -->
+	<import
+		resource="classpath:com/wondersgroup/wsscclib/pagequery/pagequeryContext.xml" />
+
+	<!-- 缓存构件 -->
+	<import resource="classpath:com/wondersgroup/wsscclib/cache/cacheContext.xml" />
+	<!-- 规则引擎构件 <import resource="classpath:com/wondersgroup/wsscclib/ruleengine/ruleEngineContext.xml" 
+		/> -->
+	<!-- 回退构件 <import resource="classpath:com/wondersgroup/wsscclib/rollback/rollbackContext.xml" 
+		/> -->
+	<!-- 统计查询构件 <import resource="classpath:com/wondersgroup/wsscclib/gquery/gqueryContext.xml" 
+		/> -->
+	<!-- 流水号构件 <import resource="classpath:com/wondersgroup/wsscclib/sequence/sequenceContext.xml" 
+		/> -->
+	<!-- 长任务构件 <import resource="classpath:com/wondersgroup/wsscclib/longtask/longtaskContext.xml" 
+		/> -->
+
+	<!-- 业务锁构件 <import resource="classpath:com/wondersgroup/wsscclib/lock/lockContext.xml" 
+		/> -->
+	<!-- =================================================================== -->
+	<!-- WSSIP-COMMONS资源接入 -->
+	<!-- =================================================================== -->
+	<import
+		resource="classpath:com/wondersgroup/wssip/bc/commons/event/eventContext.xml" />
+	<!-- 变更明细 <import resource="classpath:com/wondersgroup/wssip/commons/change/changeContext.xml" 
+		/> -->
+	<!-- 字典明细 -->
+	<import
+		resource="classpath:com/wondersgroup/wssip/commons/dictionary/dictionaryContext.xml" />
+	<!-- 文件导入 <import resource="classpath:com/wondersgroup/wssip/commons/file/fileContext.xml" 
+		/> -->
+	<!-- 算法配置 <import resource="classpath:com/wondersgroup/wssip/commons/ruleengine/ruleEngineContext.xml" 
+		/> -->
+	<!-- EXCEL打印、补打印 <import resource="classpath:com/wondersgroup/wssip/commons/reprint/reprintContext.xml" 
+		/> -->
+	<!-- 回退 <import resource="classpath:com/wondersgroup/wssip/commons/rollback/rollbackContext.xml" 
+		/> -->
+	<!-- 统计查询转换器 <import resource="classpath:com/wondersgroup/wssip/commons/gquery/convertersContext.xml" 
+		/> -->
+
+	<!-- 字典 缓存 -->
+	<import
+		resource="classpath:com/wondersgroup/wssip/application/businesscode/businessCodeContext.xml" />
+
+
+
+	<!-- 稽核行政处理BS -->
+	<import
+		resource="classpath:com/wondersgroup/bc/auditadministrativedisposal/componentsContext.xml" />
+
+	<!-- 医保费用审核BS -->
+	<import
+		resource="classpath:com/wondersgroup/bc/medicarecostaudit/componentsContext.xml" />
+
+	<!-- 规则知识库管理BS -->
+	<import
+		resource="classpath:com/wondersgroup/bc/ruleknowledgemanage/componentsContext.xml" />
+
+	<!-- 批量数据处理BS -->
+	<import
+		resource="classpath:com/wondersgroup/bc/sqapplydis/componentsContext.xml" />
+
+	<!-- 业务协同平台 -->
+	<import
+		resource="classpath:com/wondersgroup/bc/businesscollaboration/componentsContext.xml" />
+	<!-- 分析报告 -->
+	<import
+		resource="classpath:com/wondersgroup/bc/analysisreport/componentsContext.xml" />
+	<!-- 统计分析 -->
+	<import
+		resource="classpath:com/wondersgroup/bc/statisticalanalysis/componentsContext.xml" />
+	<!-- 规则引擎 -->
+	<import resource="classpath:com/wondersgroup/local/jkgz/jkgzContext.xml" />
+	<!-- 审核复议 -->
+	<import resource="classpath:com/wondersgroup/bc/k5/componentsContext.xml" />
+	<!-- 药店综合分析 -->
+	<import resource="classpath:com/wondersgroup/bc/k6/componentsContext.xml" />
+	<!-- 费用审核 -->
+	<import resource="classpath:com/wondersgroup/bc/k2/componentsContext.xml" />
+	<!-- 稽核 -->
+	<import resource="classpath:com/wondersgroup/bc/k3/componentsContext.xml" />
+	<!-- 药店药品使用排名-->
+	<import resource="classpath:com/wondersgroup/bc/k6/componentsContext.xml" />
+	<!-- 稽核 -->
+    <import resource="classpath:com/wondersgroup/bc/auditadministrativedisposal/componentsContext.xml" />
+</beans>
+

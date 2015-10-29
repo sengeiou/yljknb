@@ -1,0 +1,228 @@
+package com.wondersgroup.local.k5.f10507001.vo;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import com.wondersgroup.bc.medicarecostaudit.medaudit.model.dto.Kc62DTO;
+
+public class Kc62VO  extends Kc62DTO{
+	
+	private SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd");
+	
+	private String aac003;//姓名
+	
+	private String aac004;//性别
+	
+	private String aac006;//出生年月(输出年龄)
+	
+	private String akb021;//医院名称
+	
+	private Date akc194;//就诊时间(结算时间)
+	
+	private Date akc196;//费用发生时间
+	
+	private Date baz020;//智能审核时间 
+	
+	private Date baz025;//医院反馈时间
+	private String aac002;//医保号
+	private String ake007;//(原)社保三大目录统一编码
+	private String ake008;//明细名称 (原)社保三大目录名称 
+	private String aaa133;//疑点说明  
+	private Double akc253;//自费
+	private Double akc254;//自付
+	private String bac003;//医生姓名
+	private Date baz024;//申述过期时间
+	private String akc050;//诊断信息
+	private String akc193;//诊断信息编码
+	private String baz022;//操作人
+	private Date baz023;//上次操作时间
+	private String baz024zx;//中心端显示过期时间'--'
+	public String getAac003() {
+		return aac003;
+	}
+
+	public void setAac003(String aac003) {
+		this.aac003 = aac003;
+	}
+
+	public String getAac004() {
+		return aac004;
+	}
+
+	public void setAac004(String aac004) {
+		this.aac004 = aac004;
+	}
+
+	public String getAac006() {
+		Calendar birthday =Calendar.getInstance();
+		Calendar jzsj =Calendar.getInstance();
+		try {
+			birthday.setTime(sdf.parse(aac006));
+		} catch (ParseException e) {
+			return "";
+		}
+		if (this.getAkc194()!=null) {
+			jzsj.setTime(this.getAkc194());
+		}
+		int nl=0;
+		if (jzsj.get(Calendar.MONTH)<birthday.get(Calendar.MONTH)) {
+			nl=jzsj.get(Calendar.YEAR)-birthday.get(Calendar.YEAR)-1;
+		}else {
+			nl=jzsj.get(Calendar.YEAR)-birthday.get(Calendar.YEAR);
+		}
+		return nl+"";
+	}
+
+	public void setAac006(String aac006) {
+		this.aac006 = aac006;
+	}
+
+	public String getAkb021() {
+		return akb021;
+	}
+
+	public void setAkb021(String akb021) {
+		this.akb021 = akb021;
+	}
+
+	public Date getAkc194() {
+		return akc194;
+	}
+
+	public void setAkc194(Date akc194) {
+		this.akc194 = akc194;
+	}
+
+	public Date getAkc196() {
+		return akc196;
+	}
+
+	public void setAkc196(Date akc196) {
+		this.akc196 = akc196;
+	}
+
+	public Date getBaz020() {
+		return baz020;
+	}
+
+	public void setBaz020(Date baz020) {
+		this.baz020 = baz020;
+	}
+
+	public Date getBaz025() {
+		return baz025;
+	}
+
+	public void setBaz025(Date baz025) {
+		this.baz025 = baz025;
+	}
+
+	public String getAac002() {
+		return aac002;
+	}
+
+	public void setAac002(String aac002) {
+		this.aac002 = aac002;
+	}
+
+	public String getAke007() {
+		return ake007;
+	}
+
+	public void setAke007(String ake007) {
+		this.ake007 = ake007;
+	}
+
+	public String getAke008() {
+		return ake008;
+	}
+
+	public void setAke008(String ake008) {
+		this.ake008 = ake008;
+	}
+
+	public String getAaa133() {
+		return aaa133;
+	}
+
+	public void setAaa133(String aaa133) {
+		this.aaa133 = aaa133;
+	}
+
+	public Double getAkc253() {
+		return akc253;
+	}
+
+	public void setAkc253(Double akc253) {
+		this.akc253 = akc253;
+	}
+
+	public Double getAkc254() {
+		return akc254;
+	}
+
+	public void setAkc254(Double akc254) {
+		this.akc254 = akc254;
+	}
+
+	public String getBac003() {
+		return bac003;
+	}
+
+	public void setBac003(String bac003) {
+		this.bac003 = bac003;
+	}
+
+	public Date getBaz024() {
+		return baz024;
+	}
+
+	public void setBaz024(Date baz024) {
+		this.baz024 = baz024;
+	}
+
+	public String getAkc050() {
+		return akc050;
+	}
+
+	public void setAkc050(String akc050) {
+		this.akc050 = akc050;
+	}
+
+	public String getAkc193() {
+		return akc193;
+	}
+
+	public void setAkc193(String akc193) {
+		this.akc193 = akc193;
+	}
+
+	public String getBaz022() {
+		return baz022;
+	}
+
+	public void setBaz022(String baz022) {
+		this.baz022 = baz022;
+	}
+
+
+	public Date getBaz023() {
+		return baz023;
+	}
+
+	public void setBaz023(Date baz023) {
+		this.baz023 = baz023;
+	}
+
+	public void setBaz024zx(String baz024zx) {
+		this.baz024zx = baz024zx;
+	}
+
+	public String getBaz024zx() {
+		return baz024zx;
+	}
+	
+	
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<package name="/k5/f10502001" extends="shyb-default" namespace="/k5/f10502001">
+	
+	    <!-- 查询kb41 -->
+     <action name="queryKb41Message" class="queryKb41MessageAction"></action>
+        <!-- 返回修改kb41数据 -->
+     <action name="loadHospMessage" class="loadHospMessageAction"></action>
+     	<!-- 保存kb41 -->
+     <action name="saveHospMessage" class="saveHospMessageAction"></action>
+     
+</package>				
+  
+</struts>

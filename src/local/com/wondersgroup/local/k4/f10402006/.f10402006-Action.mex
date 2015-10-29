@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="/k4/f10402006" location="10,10" size="460,210">
+    <action name="addRuleTarget" location="15,23" size="150,40" />
+    <action name="queryRuleTarget" location="260,23" size="150,40" />
+    <action name="queryCaseNumberTarget" location="15,163" size="150,40" />
+    <action name="deleteRuleTarget" location="260,163" size="150,40" />
+    <action name="ruleTargetData" location="0,0" size="0,0" />
+  </package>
+</Struts2Diagram>
+

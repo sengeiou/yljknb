@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>稽核处理</description>
+
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301004/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301005/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301006/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301007/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301008/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301010/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301011/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301002/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301014/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301016/componentContext.xml" />
+		<import resource="classpath:com/wondersgroup/bc/k3/f10301015/componentContext.xml" />
+		
+</beans>

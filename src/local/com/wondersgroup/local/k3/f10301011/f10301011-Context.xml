@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10301011 Context</description>
+	
+	<bean id="queryCaseInfoAction" class="com.wondersgroup.local.k3.f10301011.action.QueryCaseInfoAction" scope="prototype">
+		  <description>查询案件信息</description>
+		  <property name="f10301011VS" ref="f10301011VS"></property>
+	</bean>
+	
+	<bean id="f10301011Action" class="com.wondersgroup.local.k3.f10301011.action.QueryRecheckAction" scope="prototype">
+		  <description>复审信息</description>
+		  <property name="f10301011VS" ref="f10301011VS"></property>
+	</bean>
+	
+	<bean id="stateCheckAction3" class="com.wondersgroup.local.k3.f10301011.action.StateCheckAction" scope="prototype">
+		  <description>修改案件状态为初审</description>
+		  <property name="f10301011VS" ref="f10301011VS"></property>
+	</bean>
+	
+	<bean id="f10301011VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301011.vs.impl.F10301011VSImpl">
+				<property name="f10301011BS" ref="f10301011BS"></property>
+				<property name="f10301007BS" ref="adminDisposalBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

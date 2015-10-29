@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10510001 Context</description>
+	
+	<bean id="f10510001Action"
+		  class="com.wondersgroup.local.k5.f10510001.action.F10510001Action"
+		  scope="prototype">
+		  <description>医保单据复议操作</description>
+		  <property name="f10510001VS" ref="f10510001VS"></property>
+	</bean>
+	
+	
+	<bean id="f10510001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10510001.vs.impl.F10510001VSImpl">
+				<property name="f10510001BS" ref="f10510001BS"></property>
+			</bean>
+		</property>
+	</bean>
+
+	
+
+</beans>

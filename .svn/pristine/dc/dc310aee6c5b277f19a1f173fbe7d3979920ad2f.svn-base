@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering 
+  SYSTEM "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+<hibernate-reverse-engineering >
+
+<type-mapping>
+
+ <!-- jdbc-type is name fom java.sql.Types -->
+ <sql-type jdbc-type="VARCHAR" length='20' hibernate-type="string" /> 
+ <sql-type jdbc-type="VARCHAR" length='1'  hibernate-type="yes_no" />
+ 
+ <sql-type jdbc-type="NUMERIC" precision='1' hibernate-type="boolean" /> 
+ <sql-type jdbc-type="NUMERIC" precision='16' scale="0" hibernate-type="java.lang.Long"/> 
+ <sql-type jdbc-type="NUMERIC" precision='17' scale="0" hibernate-type="java.lang.Long" /> 
+ <sql-type jdbc-type="NUMERIC" precision='18' scale="0" hibernate-type="java.lang.Long" /> 
+ <sql-type jdbc-type="NUMERIC" precision='19' scale="0" hibernate-type="java.lang.Long" /> 
+ 
+ <sql-type jdbc-type="DECIMAL" precision='1' hibernate-type="boolean" /> 
+ <sql-type jdbc-type="DECIMAL" precision='16' scale="0" hibernate-type="java.lang.Long"/> 
+ <sql-type jdbc-type="DECIMAL" precision='17' scale="0" hibernate-type="java.lang.Long" /> 
+ <sql-type jdbc-type="DECIMAL" precision='18' scale="0" hibernate-type="java.lang.Long" /> 
+ <sql-type jdbc-type="DECIMAL" precision='19' scale="0" hibernate-type="java.lang.Long" /> 
+ 
+ 
+</type-mapping>
+    <table-filter match-schema="YLFWJK" match-name="KC65" package="com.wondersgroup.wssip.bc.model.bo"/>
+</hibernate-reverse-engineering>

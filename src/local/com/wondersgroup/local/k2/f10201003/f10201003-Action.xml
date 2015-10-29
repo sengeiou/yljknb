@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k2/f10201003"  extends="shyb-default" namespace="/k2/f10201003">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k2/f10201003/f10201003.jsp</result>
+	   </action>
+	   
+	   <!-- 单据复审操作action -->
+	   <action name="medDocumentCheckOperate" class="medDocumentCheckOperateAction" />
+	   
+	   <!-- 分页查询复审违规单据统计信息 -->
+	   <action name="queryCheckMedDocument" class="medDocumentCheckOperateAction" method="queryCheckMedDocument"/>
+	   
+	   <!-- 分页查询复审单据违规信息 -->
+	   <action name="queryCheckMedDocumentIllegal" class="medDocumentCheckOperateAction" method="queryCheckMedDocumentIllegal"/>
+	   
+	   <!-- 单据明细复审操作action -->
+	   <action name="medDocumentDetailCheckOperate" class="medDocumentDetailCheckOperateAction" />
+	   
+	   <!-- 分页查询复审违规单据明细统计信息 -->
+	   <action name="queryCheckMedDocumentDetail" class="medDocumentDetailCheckOperateAction" method="queryCheckMedDocumentDetail"/>
+	   
+	   <!-- 分页查询复审单据明细违规信息 -->
+	   <action name="queryCheckMedDocumentDetailIllegal" class="medDocumentDetailCheckOperateAction" method="queryCheckMedDocumentDetailIllegal"/>
+	   
+	   <!-- 交互信息操作action -->
+	   <action name="medInteractive" class="medInteractiveAction" />
+	   
+	   <!-- 查询信息操作action -->
+	   <action name="queryMedInteractiveInfo" class="medInteractiveAction" method="queryMedInteractiveInfo"/>
+	   
+	</package>
+</struts>

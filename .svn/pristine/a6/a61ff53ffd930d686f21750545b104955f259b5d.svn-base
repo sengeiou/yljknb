@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10402005 Context</description>
+
+	<bean id="addRuleAction"
+		class="com.wondersgroup.local.k4.f10402005.action.AddRuleAction"
+		scope="prototype">
+	<description>添加方案</description>
+		<property name="f10402005VS" ref="f10402005VS"></property>
+	</bean>
+
+	<bean id="queryRuleMessageAction"
+		class="com.wondersgroup.local.k4.f10402005.action.QueryRuleMessageAction"
+		scope="prototype">
+	<description>查询方案</description>
+		<property name="f10402005VS" ref="f10402005VS"></property>
+	</bean>
+	
+	<bean id="updateRuleMessageAction"
+		class="com.wondersgroup.local.k4.f10402005.action.UpdateRuleAction"
+		scope="prototype">
+	<description>修改方案</description>
+		<property name="f10402005VS" ref="f10402005VS"></property>
+	</bean>
+	
+	<bean id="loadRuleMessageAction"
+		class="com.wondersgroup.local.k4.f10402005.action.LoadRuleMessageAction"
+		scope="prototype">
+	<description>启动方案</description>
+		<property name="f10402005VS" ref="f10402005VS"></property>
+	</bean>
+
+	<bean id="deleteRuleMessageAction"
+		class="com.wondersgroup.local.k4.f10402005.action.DeleteRuleMessageAction"
+		scope="prototype">
+	<description>删除方案</description>
+		<property name="f10402005VS" ref="f10402005VS"></property>
+	</bean>
+	
+	<bean id="ruleMessageDataAction"
+		class="com.wondersgroup.local.k4.f10402005.action.RuleMessageDataAction"
+		scope="prototype">
+	<description>加载时间和创建人</description>
+	</bean>
+	
+	<bean id="f10402005VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10402005.vs.impl.F10402005VSImpl">
+			<property name="ruleManageBS" ref="ruleManageBS"></property>
+			</bean>
+		</property>
+</bean>
+
+</beans>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k6/f10603002" extends="shyb-default" namespace="/k6/f10603002">
+	
+		 <action name="index" class="linkAction">
+			<result name="success">/pages/k6/f10603002/f10603002.jsp</result>
+	    </action>
+	    
+	    <!-- 機構門診綜合分析(圖表) -->
+	    <action name="loadMediClinCloum" class="queryMediClinAction" method="loadMediClinCloumInfo"/>
+	    
+	    <!-- 機構門診 醫療類別 -->
+	    <action name="loadMediClinMedical" class="queryMediClinAction" method="loadMediClinMedicalInfo"/>
+	    
+	    <!-- 機構門診 身份類別 -->
+	    <action name="loadMediClinIdentify" class="queryMediClinAction" method="loadMediClinIdentifyInfo"/>
+	    
+	    <!-- 機構門診 疾病分類 -->
+	    <action name="loadMediClinDisease" class="queryMediClinAction" method="loadMediClinDiseaseInfo"/>
+	    
+	</package>
+</struts>

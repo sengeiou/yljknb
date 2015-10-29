@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<package name="/k5/f10502003" extends="shyb-default" namespace="/k5/f10502003">
+	    <!-- 查询kf65-->
+     <action name="queryKf65Message" class="queryKf65MessageAction"></action>
+     	    <!-- 保存kf65-->
+     <action name="saveKf65Message" class="saveKf65MessageAction"></action>
+
+     	    <!-- 查询kf65通过信息-->
+     <action name="queryKf05Message" class="queryKf05MessageAction"></action>
+     
+     	    <!-- 查询kf65通过信息-->
+     <action name="loadUpdateMessage" class="loadUpdateMessageAction"></action>
+     
+      <action name="deleteKf05Message" class="deleteKf05MessageAction"></action>
+       <action name="updateKf65Message" class="updateKf65MessageAction"></action>
+</package>				
+  
+</struts>

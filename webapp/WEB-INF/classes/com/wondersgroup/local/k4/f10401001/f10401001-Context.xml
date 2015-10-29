@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10401001 Context</description>
+    
+    <bean id="queryPlanManageAction"
+		class="com.wondersgroup.local.k4.f10401001.action.QueryPlanManageAction"
+		scope="prototype">
+		<description>方案信息查询</description>
+		<property name="f10401001VS" ref="f10401001VS"></property>
+	</bean>
+	
+	<bean id="addPlanManageAction"
+		  class="com.wondersgroup.local.k4.f10401001.action.AddPlanManageAction"
+		  scope="prototype">
+		  <description>添加方案</description>
+		  <property name="f10401001VS" ref="f10401001VS"></property>
+	</bean>
+	
+	<bean id="updataPlanManageAction"
+		  class="com.wondersgroup.local.k4.f10401001.action.UpdatePlanManageAction"
+		  scope="prototype">
+		  <description>更新方案信息</description>
+		  <property name="f10401001VS" ref="f10401001VS"></property>
+	</bean>
+	
+	<bean id="loadPlanManageAction"
+		  class="com.wondersgroup.local.k4.f10401001.action.LoadPlanManageAction"
+		  scope="prototype">
+		  <description>获取更新信息</description>
+		  <property name="f10401001VS" ref="f10401001VS"></property>
+	</bean>
+	
+	<bean id="startPlanManageAction"
+		  class="com.wondersgroup.local.k4.f10401001.action.StartPlanManageAction"
+		  scope="prototype">
+		  <description>启动方案</description>
+		  <property name="f10401001VS" ref="f10401001VS"></property>
+	</bean>
+	
+	<bean id="initPlanDataAction"
+		  class="com.wondersgroup.local.k4.f10401001.action.InitPlanDataAction"
+		  scope="prototype">
+		  <description>加载数据</description>
+	</bean>
+	
+	<bean id="f10401001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10401001.vs.impl.F10401001VSImpl">
+				<property name="planManageBS" ref="planManageBS"></property>
+			</bean>
+		</property>
+	</bean>
+		
+	
+</beans>

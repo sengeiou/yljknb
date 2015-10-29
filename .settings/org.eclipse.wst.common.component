@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="yljk">
+        <wb-resource deploy-path="/" source-path="/webapp"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/patch"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/local"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/wssip"/>
+        <property name="java-output-path" value="/yljk/webapp/WEB-INF/classes"/>
+        <property name="context-root" value="/yljknb"/>
+    </wb-module>
+</project-modules>

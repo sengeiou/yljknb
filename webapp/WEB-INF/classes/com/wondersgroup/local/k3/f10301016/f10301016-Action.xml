@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k3/f10301016"  extends="shyb-default" namespace="/k3/f10301016">
+	  <action name="index" class="linkAction">
+			<result name="success">/pages/k3/f10301016/f10301016.jsp</result>
+	   </action>  
+		<!-- 询问笔录查询 -->
+		<action name="queryInquiryInput"  class="f10301016Action" />
+		
+	 	<!-- 询问录入 -->
+	 	<action name="saveInquiry" class="saveInquiryAction"/>
+	 	
+	 	<!-- 修改询问录入 -->
+		<action name="loadInquiryProblem" class="loadInquiryAction" method="loadInquiryProblemInfo"/>
+		
+		<!-- 保存修改笔录 -->
+		<action name="updateInquiryProblem" class="loadInquiryAction" />
+		
+		<!-- 删除笔录 -->
+		<action name="deleteInquiry" class="deleteInquiryAction"/>
+		
+		<!-- 导出Word -->
+		<action name="exportWord" class="com.wondersgroup.local.k3.f10301016.action.ExportWordAction" method="createWord">
+		  <result name="createWordSuccess" type="redirectAction">
+		   <param name="actionName">downloadWord</param>  
+		   <param name="filePath">${filePath}</param>
+		   <param name="fileOnlyName">${fileOnlyName}</param>
+		   <param name="fileName">${fileName}</param>
+		   <param name="encode">true</param>
+		  </result>
+		 </action>
+		 <action name="downloadWord" class="com.wondersgroup.local.k3.f10301016.action.ExportWordAction" method="downloadWord">
+		  <result name="downloadWord" type="stream">
+		   <param name="contentDisposition">attachment;filename="${fileName}"</param>
+		   <param name="inputName">wordFile</param>
+		   <param name="encode">true</param>
+		  </result>
+		  <result name="error">/error.jsp</result>
+		 </action>	
+		 
+		 <!-- 导出询问笔录Word -->
+		<action name="exportWord_bl" class="exportWord_BL" method="exportWord_bl"> </action>	
+		
+		<action name="fileExist" class="downloadAction" method="fileExist"></action>
+		
+		<action name="downLoad" class="downloadAction" method="downLoad">
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="contentDisposition">attachment;filename="${#request['fileName']}"</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+	 </package>
+</struts>

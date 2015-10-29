@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<package name="/k3/f10301004" extends="shyb-default" namespace="/k3/f10301004">
+		
+		<!-- 保存稽核调查记录 -->
+		<action name="saveSurveyRecord" class="saveSurveyRecordAction"/>
+		<!-- 调查记录完成 -->
+		<action name="surveyDone" class="saveSurveyRecordAction" method="surveyDone"></action>
+		<!-- 发单 -->
+		<action name="updateSurveyRecord" class="updateSurveyRecordAction"/>
+		
+		<!-- 笔录关联 -->
+		<action name="relateRecord" class="relateRecordAction" method="relateRecord"/>
+		
+		<!-- 查询笔录 -->
+		<action name="queryInquiryInput" class="relateRecordAction"/>
+		
+		<!-- 查询立案审批信息 -->
+		<action name="queryApprovalInfo" class="approvalAction" ></action>
+		
+		<!-- 保存立案审批信息 -->
+		<action name="saveAf61" class="approvalAction" method="saveAf61"></action>
+		
+		<!-- 查询医师 -->
+		<action name="querKf05ByAaz077" class="relateRecordAction" method="queryKf05ByAaz077"></action>
+		
+		<!-- 查询参保人 -->
+		<action name="queryAc01ByAaz077" class="relateRecordAction" method="queryAc01ByAaz077"></action>
+		
+		<!-- 查询医疗机构 -->
+		<action name="queryKb01ByAaz077" class="relateRecordAction" method="queryKb01ByAaz077"></action>
+		
+		<!-- 导出立案审批信息 -->
+		<action name="exportWord_lasp" class="approvalAction" method="exportWord_lasp"></action>
+			
+		<!-- 删除对象 -->
+		<action name="deleteObject" class="deleteObject" ></action>
+	</package>
+	
+</struts>

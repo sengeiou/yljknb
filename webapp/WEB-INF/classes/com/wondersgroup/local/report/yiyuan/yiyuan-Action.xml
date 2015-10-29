@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/report/yiyuan" extends="shyb-default" namespace="/report/yiyuan">
+	
+		<action name="index" class="linkAction">
+			<result name="success">/pages/report/yiyuan.jsp</result>
+		</action>
+		
+		<!-- 医院基本信息 -->
+	    <action name="yiyuaninfo" class="yiYuanQueryAction" method="yiyuaninfo" />
+	    
+	    <action name="getFeeItemsConstituentDataYiyuan" class="yiYuanQueryAction" method="getFeeItemsConstituentDataYiyuan" />
+		
+		<action name="getFundSourceConsituentDataYiyuan" class="yiYuanQueryAction" method="getFundSourceConsituentDataYiyuan" />
+		
+		<action name="getOtherIndicatorsDataYiyuan" class="yiYuanQueryAction" method="getOtherIndicatorsDataYiyuan" />
+
+        <action name="getCurrentYearMonthlyDistributionDataYiyuan" class="yiYuanQueryAction" method="getCurrentYearMonthlyDistributionDataYiyuan" />
+
+        <action name="getYsslDataYiyuan" class="yiYuanQueryAction" method="getYsslDataYiyuan" />
+        
+        <action name="getJzslDataYiyuan" class="yiYuanQueryAction" method="getJzslDataYiyuan" />
+		<!-- 分页查询疑点信息情况 -->
+		<action name="queryYdxxGrid" class="yiYuanQueryAction" method="queryYdxxGrid"/>
+		<!-- 分页查询疑点信息情况 -->
+		<action name="queryLswgGrid" class="yiYuanQueryAction" method="queryLswgGrid"/>
+
+	</package>
+</struts>

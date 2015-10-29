@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>
+		Spring Configuration .
+	</description>
+
+	<!-- 智能审核概况查看 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10201001/f10201001-Context.xml"/>
+	<!-- 单据初审 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10201002/f10201002-Context.xml"/>
+	<!-- 单据复审 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10201003/f10201003-Context.xml"/>
+	<!--审核复议 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10201004/f10201004-Context.xml"/>
+	<!--批量扣款任务计划 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10201005/f10201005-Context.xml"/>
+	<!--单据审核 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10201006/f10201006-Context.xml"/>
+	<!--单据复议 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10201007/f10201007-Context.xml"/>
+	<!--汇总查询 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10202001/f10202001-Context.xml"/>
+	<!--智能审核结果查询 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10202002/f10202002-Context.xml"/>
+	
+	<!-- 费用审核->申诉审核 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10203002/f10203002-Context.xml"/>
+	
+	<!-- 复议审核 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10204001/f10204001-Context.xml"/>
+	
+	<!-- 主动复议 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10204002/f10204002-Context.xml"/>
+	
+	<!-- 复议出处理查询 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10204003/f10204003-Context.xml"/>
+	
+	<!-- 人工初审 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10203001/f10203001-Context.xml"/>
+	
+	<!-- 审核查询 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10203003/f10203003-Context.xml"/>
+	
+	<!-- 综合查询 审核查询 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10202003/f10202003-Context.xml"/>
+	<!-- 综合查询 复议查询 -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10202004/f10202004-Context.xml"/>
+
+	<!-- 单病种  -->
+	<import resource="classpath:com/wondersgroup/local/k2/f10205001/f10205001-Context.xml"/>
+</beans>

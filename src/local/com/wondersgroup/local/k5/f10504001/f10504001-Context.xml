@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10504001 Context</description>
+	
+	<bean id="f10504001Action" class="com.wondersgroup.local.k5.f10504001.action.ComplaintHandlingPageAction" scope="prototype">
+		  <description>申诉处理</description>
+		  <property name="f10504001vs" ref="f10504001vs"></property>
+	</bean>
+	<bean id="f10504001vs" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10504001.vs.impl.F10504001VSImpl">
+				<property name="f10504001Bs" ref="f10504001Bs"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="f10504001InfoAction" class="com.wondersgroup.local.k5.f10504001.action.ComplaintHandlingInfoAction" scope="prototype">
+		  <description>申诉处理</description>
+		  <property name="f10504001InfoVs" ref="f10504001InfoVs"></property>
+	</bean>
+	<!-- 医院汇总 -->
+	<bean id="queryNumberAction" class="com.wondersgroup.local.k5.f10504001.action.QueryNumberAction" scope="prototype">
+		<property name="f10504001VS" ref="f10504001InfoVs"></property>
+	</bean>
+	<bean id="f04exportExcelAction"
+		class="com.wondersgroup.local.k5.f10504001.action.ExportExcelAction"
+		scope="prototype">
+		<description>导出ExcelAction</description>
+		<property name="f10504001InfoVs" ref="f10504001InfoVs"></property>
+	</bean>
+	
+	<bean id="f10504001InfoVs" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10504001.vs.impl.F10504001VSImpl">
+				<property name="f10504001Bs" ref="f10504001Bs"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+</beans>

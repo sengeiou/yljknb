@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>f10301004 Context</description>
+	
+	<bean id="saveSurveyRecordAction"
+		  class="com.wondersgroup.local.k3.f10301004.action.SaveSurveyRecordAction"
+		  singleton="false">
+		  <description>保存稽核调查记录</description>
+		  <property name="f10301004VS" ref="f10301004VS"></property>
+	</bean>
+	
+	<bean id="deleteObject" class="com.wondersgroup.local.k3.f10301004.action.DeleteObjectAction" singleton="false">
+		<description>删除对象 </description>
+		<property name="f10301004VS" ref="f10301004VS"></property>
+	</bean>
+	
+	<bean id="updateSurveyRecordAction"
+		  class="com.wondersgroup.local.k3.f10301004.action.UpdateSurveyRecordAction"
+		  singleton="false">
+		  <description>修改稽核调查记录</description>
+		  <property name="f10301004VS" ref="f10301004VS"></property>
+	</bean>
+	
+	<bean id="relateRecordAction" class="com.wondersgroup.local.k3.f10301004.action.RelateRecordAction" singleton="false">
+		<description>案件关联笔录</description>
+		<property name="f10301004VS" ref="f10301004VS"></property>
+	</bean>
+	
+	<bean id="approvalAction" class="com.wondersgroup.local.k3.f10301004.action.ApprovalAction" singleton="false">
+		<description>立案审批</description>
+		<property name="f10301004vs" ref="f10301004VS"></property>
+	</bean>
+	
+	 <bean id="f10301004VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301004.vs.impl.F10301004VSImpl">
+				<property name="adminDisposalBS" ref="adminDisposalBS"></property>
+				<property name="f10301004BS" ref="f10301004BS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

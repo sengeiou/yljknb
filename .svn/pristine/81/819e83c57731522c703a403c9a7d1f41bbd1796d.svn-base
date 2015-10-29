@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10503003 Context</description>
+    
+   	<bean id="centerBreAuditAction"
+		  class="com.wondersgroup.local.k5.f10503003.action.CenterBreAuditAction"
+		  scope="prototype">
+		  <description>中心端审核申诉</description>
+		  <property name="f10503003VS" ref="f10503003VS"></property>
+	</bean>
+	
+	<bean id="f10503003VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10503003.vs.impl.F10503003VSImpl">
+				<property name="auditComplaintBS" ref="auditComplaintBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

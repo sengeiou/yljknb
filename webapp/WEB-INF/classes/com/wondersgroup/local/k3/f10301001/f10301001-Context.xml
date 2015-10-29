@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>f10301001 Context</description>
+    
+    <bean id="saveAuditProblemAction"
+		class="com.wondersgroup.local.k3.f10301001.action.SaveAuditProblemAction"
+		singleton="false">
+		<description>稽核问题信息登记</description>
+		<property name="f10301001VS" ref="f10301001VS"></property>
+	</bean>
+	
+	<bean id="updateAuditProblemAction"
+		  class="com.wondersgroup.local.k3.f10301001.action.UpdateAuditProblemAction"
+		  singleton="false">
+		  <description>稽核问题信息修改</description>
+		  <property name="f10301001VS" ref="f10301001VS"></property>
+	</bean>
+	
+	<bean id="queryAuditProblemAction"
+		  class="com.wondersgroup.local.k3.f10301001.action.QueryAuditProblemAction"
+		  singleton="false">
+		  <description>稽核问题信息查询</description>
+		  <property name="f10301001VS" ref="f10301001VS"></property>
+	</bean>
+	
+	<bean id="deleteAuditProblemAction"
+		  class="com.wondersgroup.local.k3.f10301001.action.DeleteAuditProblemAction"
+		  singleton="false">
+		  <description>稽核问题信息删除</description>
+		  <property name="f10301001VS" ref="f10301001VS"></property>
+	</bean>
+	
+	<bean id="exportWord_yddj" class="com.wondersgroup.local.k3.f10301001.action.ExportWordYddjAction" singleton="false">
+		<property name="f10301001VS" ref="f10301001VS"></property>
+	</bean>
+	
+	<bean id="f10301001VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301001.vs.impl.F10301001VSImpl">
+				<property name="adminDisposalBS" ref="adminDisposalBS"></property>
+			</bean>
+		</property>
+	</bean>
+		
+
+</beans>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10502004 Context</description>
+
+	<bean id="auditPassHospAction"
+		class="com.wondersgroup.local.k5.f10502004.action.AuditPassHospAction"
+		scope="prototype">
+	<description>审核通过</description>
+		<property name="f10502004VS" ref="f10502004VS"></property>
+	</bean>
+	
+
+
+	
+	<bean id="f10502004VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k5.f10502004.vs.impl.F10502004VSImpl">
+				<property name="auditComplaintBS" ref="auditComplaintBS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

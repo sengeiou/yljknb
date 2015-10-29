@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="wssip-default" abstract="true" extends="cuteframework-default,exceltemplate-default">
+		<interceptors>
+			<interceptor name="businessContext" class="com.wondersgroup.wssip.application.BusinessContextInterceptor"/>
+			<interceptor name="actionLogger" class="com.wondersgroup.wssip.application.ActionLogInterceptor"/>
+			<interceptor-stack name="wssip-defaultStack">
+				<interceptor-ref name="cuteframework-defaultStack"/>
+				 
+				<interceptor-ref name="loginCheck">
+					<param name="excludeMethods">login,logout,ulOperate,loginByAjax</param>
+				</interceptor-ref>	
+				 			
+				<interceptor-ref name="businessContext">				
+					<param name="excludeMethods">login,logout,ulOperate,loginByAjax</param> 
+				</interceptor-ref>				
+				<interceptor-ref name="actionLogger"/>  
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="wssip-defaultStack"></default-interceptor-ref>
+		<global-results>
+			<result name="login" type="redirect">/login.jsp</result>
+			<result name="businessError" type="ajax"></result>
+			<result name="runtimeError" type="ajax"></result>
+			<result name="ajaxError" type="ajax" />
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping result="systemError" exception="com.wondersgroup.framework.core.exception.FrameworkException" />
+			<exception-mapping result="businessError" exception="com.wondersgroup.framework.core.exception.BusinessException" />
+			<exception-mapping result="runtimeError" exception="java.lang.RuntimeException" />
+		</global-exception-mappings>
+
+	</package>
+	<package name="shyb-default" abstract="true" extends="wssip-default">
+	
+	</package>
+	<!-- 一体化平台公用Action定义 -->
+	<include file="com/wondersgroup/wssip/local/application/localAppAction.xml" />
+	<include file="com/wondersgroup/wssip/local/commons/commons-Action.xml" />
+		 
+	<include file="com/wondersgroup/mycommon/mycommonAction.xml" />
+	<!-- 公共方法 -->
+	<include file="com/wondersgroup/local/common/common-Action.xml" />
+	<!-- 医保费用审核 -->
+	<include file="com/wondersgroup/local/k2/k2-Action.xml" />
+	<!-- 规则知识库管理 -->
+	<include file="com/wondersgroup/local/k4/k4-Action.xml" />
+	<!-- 稽核 -->
+	<include file="com/wondersgroup/local/k3/k3-Action.xml" />
+	<!-- 业务协同平台 -->
+	<include file="com/wondersgroup/local/k5/k5-Action.xml" />
+	<!-- 分析报告 -->
+	<include file="com/wondersgroup/local/report/report-Action.xml" />
+	<!-- 统计分析 -->
+	<include file="com/wondersgroup/local/k6/k6-Action.xml" />
+</struts>
+

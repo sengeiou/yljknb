@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>
+		CuteFramework框架Spring基础配置
+	</description>
+	
+	<!-- 核心库 -->		
+	<bean id="commonJdbcDao" class="com.wondersgroup.wssip.commons.dao.impl.CommonJdbcDaoImpl">
+		<property name="dataSource">
+			<ref bean="dataSource"/>
+		</property>
+	</bean>
+	
+	<bean class="com.wondersgroup.wssip.commons.dao.utils.CommonJdbcDaoUtils">
+		<constructor-arg>
+			<ref bean="commonJdbcDao"/>
+		</constructor-arg>
+	</bean>	
+	
+	<bean id="commonHibernateDao" class="com.wondersgroup.wssip.commons.dao.impl.CommonHibernateDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean class="com.wondersgroup.wssip.commons.dao.utils.CommonHibernateDaoUtils">
+		<constructor-arg>
+			<ref bean="commonHibernateDao"/>
+		</constructor-arg>
+	</bean>
+	
+	<!-- 核心库ＤＡＯ工具，建议使用　以下两个类，与　CommonJdbcDaoUtils｜CommonHibernateDaoUtils 功能一样-->
+	
+	<bean class="com.wondersgroup.wssip.commons.dao.utils.YbkrnlJdbcDaoUtils">
+		<constructor-arg>
+			<ref bean="commonJdbcDao"/>
+		</constructor-arg>
+	</bean>	
+	
+	<bean class="com.wondersgroup.wssip.commons.dao.utils.YbkrnlHibernateDaoUtils">
+		<constructor-arg>
+			<ref bean="commonHibernateDao"/>
+		</constructor-arg>
+	</bean>
+
+</beans>

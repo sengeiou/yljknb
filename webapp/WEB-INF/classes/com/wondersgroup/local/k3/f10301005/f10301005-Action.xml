@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<package name="/k3/f10301005" extends="shyb-default" namespace="/k3/f10301005">
+	
+		<!-- 查询待撤销案件 -->
+		<action name="queryUndoCase" class="queryUndoCaseAction"/>
+		<!-- 撤销案件 -->
+		<action name="desRegister" class="desRegisterAction"/>
+		<!--  查询撤销案件信息 -->
+		<action name="loadAuditCaseInfoByAbz001" class="queryUndoCaseAction" method="loadAuditCaseInfoByAbz001"/>
+		
+	</package>
+	
+</struts>

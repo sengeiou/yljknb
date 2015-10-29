@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10402006 Context</description>
+
+	<bean id="addDxzbAction"
+		class="com.wondersgroup.local.k4.f10402007.action.AddDxzbAction"
+		scope="prototype">
+		<description>添加监控对象维护</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+
+	<bean id="queryMldxAction"
+		class="com.wondersgroup.local.k4.f10402007.action.QueryMldxAction"
+		scope="prototype">
+		<description>查询三大目录信息</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+
+
+	<bean id="queryDxzbMessageAction"
+		class="com.wondersgroup.local.k4.f10402007.action.QueryDxzbMessage"
+		scope="prototype">
+		<description>查询监控对象信息</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+
+	<bean id="updataDxzbMessageAction"
+		class="com.wondersgroup.local.k4.f10402007.action.UpdataDxzbMessage"
+		scope="prototype">
+		<description>修改监控对象信息</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+
+	<bean id="loadRuleDxzbMessageAction"
+		class="com.wondersgroup.local.k4.f10402007.action.LoadRuleDxzbMessage"
+		scope="prototype">
+		<description>加载监控对象信息</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+
+	<bean id="deleteDxzbMessageAction"
+		class="com.wondersgroup.local.k4.f10402007.action.DeleteDxzbMessageAction"
+		scope="prototype">
+		<description>删除监控对象信息</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+
+	<bean id="queryCaseNumberDxzbAction"
+		class="com.wondersgroup.local.k4.f10402007.action.QueryCaseNumberDxzbAction"
+		scope="prototype">
+		<description>监控对象信息</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+
+
+	<bean id="queryGzzbByGzmsIdAction"
+		class="com.wondersgroup.local.k4.f10402007.action.QueryGzzbByGzmsIdAction"
+		scope="prototype">
+		<description>监控对象信息</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+
+	<bean id="ruleDxzbDataAction"
+		class="com.wondersgroup.local.k4.f10402007.action.RuleDxzbDataAction"
+		scope="prototype">
+		<description>加载人物，时间信息</description>
+	</bean>
+
+	<bean id="downLoadAction"
+		class="com.wondersgroup.local.k4.f10402007.action.DownLoadAction"
+		scope="prototype">
+		<description>下载文档格式</description>
+	</bean>
+
+	<bean id="f10402007VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k4.f10402007.vs.impl.F10402007VSImpl">
+				<property name="ruleManageBS" ref="ruleManageBS"></property>
+				<property name="sqApplyBS" ref="sqApplyBS"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="uploadDxzbAction"
+		class="com.wondersgroup.local.k4.f10402007.action.UploadDxzbAction"
+		scope="prototype">
+		<description>上传对象指标信息</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+	
+	<bean id="queryApplyDxzbInfo"
+		class="com.wondersgroup.local.k4.f10402007.action.QueryApplyDxzbInfo"
+		scope="prototype">
+		<description>查询上传指标信息</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+	
+		<bean id="batchAddDxzbMessageAction"
+		class="com.wondersgroup.local.k4.f10402007.action.BatchAddDxzbMessageAction"
+		scope="prototype">
+		<description>批量添加对象指标信息</description>
+		<property name="f10402007VS" ref="f10402007VS"></property>
+	</bean>
+
+</beans>

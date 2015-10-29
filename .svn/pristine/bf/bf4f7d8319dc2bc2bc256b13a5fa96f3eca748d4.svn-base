@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+		<package name="/k4/f10401001" extends="shyb-default" namespace="/k4/f10401001">
+	
+	    <!-- 分页查询方案信息-->
+		<action name="queryPlanManage" class="queryPlanManageAction" />
+		
+		<!-- 添加方案 -->
+		<action name="addPlanManage" class="addPlanManageAction"></action>
+		
+		<!--修改方案信息 -->
+		<action name="updataPlanManage" class="updataPlanManageAction"></action>
+		<action name="loadPlanManage" class="loadPlanManageAction"></action>
+		<!--启动方案-->
+		<action name="startPlanManage" class="startPlanManageAction"></action> 
+		<!--加载数据-->
+		<action name="initPlanData" class="initPlanDataAction"></action> 
+		</package>
+		
+</struts>

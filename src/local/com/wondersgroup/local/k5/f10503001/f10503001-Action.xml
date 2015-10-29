@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k5/f10503001"  extends="shyb-default" namespace="/k5/f10503001">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k5/f10503001/f10503001.jsp</result>
+	   </action>
+	   
+	    <!-- 分页查询违规的医疗机构及医师 -->
+	   <action name="queryViolationComplaintAction" class="violationComplaintAction" method="queryOrgDoubtList"/>
+	   
+	   <action name="violationComplaintAction" class="violationComplaintAction" />
+	    <!-- 跳转申诉页面 -->
+	   <action name="toOrgVioCompReg" class="violationComplaintAction"  method="toOrgVioCompReg"/>
+	    <!-- 跳转材料补充页面 -->
+	   <action name="toOrgVioCompRegAdd" class="violationComplaintAction"  method="toOrgVioCompRegAdd"/>
+	    <!-- 同意违规 -->
+	   <action name="consentBreach" class="violationComplaintAction"  method="consentBreach"/>
+	    <!-- 保存申诉信息 -->
+	   <action name="saveOrgVioCompReg" class="violationComplaintAction"  method="saveOrgVioCompReg"/>
+	   <!-- 保存申诉材料 -->
+	   <action name="addOrgVioCompReg" class="violationComplaintAction"  method="addOrgVioCompReg"/>
+	    <!-- 查询案件信息 -->
+	   <action name="viewPerson" class="violationComplaintAction"  method="viewPerson"/>
+	   
+	  
+	</package>
+</struts>

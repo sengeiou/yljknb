@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<package name="/k4/f10402006" extends="shyb-default" namespace="/k4/f10402006">
+	    <!-- 添加规则指标信息 -->
+     <action name="addRuleTarget" class="addRuleTargetAction"></action>
+          
+     	<!-- 查询规则指标信息 -->
+     <action name="queryRuleTarget" class="queryRuleTargetAction"></action>
+     <!--   <action name="queryCaseNumberTarget" class="queryCaseNumberTargetAction"></action> -->
+     
+        <!-- 删除规则指标信息 -->
+     <action name="deleteRuleTarget" class="deleteRuleTargetAction"></action>
+     
+     <!-- 加载数据(登陆用户,当前时间) -->
+      <action name="ruleTargetData" class="ruleTargetDataAction"></action>
+      
+        <!--返回规则名称列 -->
+      <action name="backJson" class="backJsonAction"></action>
+     
+	</package>		  
+</struts>

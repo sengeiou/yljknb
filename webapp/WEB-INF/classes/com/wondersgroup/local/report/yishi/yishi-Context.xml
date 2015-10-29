@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>yishi Context</description>
+    
+   	<bean id="yishiAction"
+		  class="com.wondersgroup.local.report.yishi.action.YishiAction"
+		  scope="prototype">
+		  <description>医师分析报告</description>
+		  <property name="yishiVS" ref="yishiVS"></property>
+	</bean>
+	
+	<bean id="yishiVS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.report.yishi.vs.impl.YishiVSImpl">
+				<property name="reportBS" ref="reportBS"></property>
+				<property name="report1BS" ref="report1BS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

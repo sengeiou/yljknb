@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k5/f10503003"  extends="shyb-default" namespace="/k5/f10503003">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k5/f10503003/f10503003.jsp</result>
+	   </action>
+	   
+	   <!-- 分页查询申诉的医疗机构及医师 -->
+	   <action name="toCenterBreAuditQuery" class="centerBreAuditAction" method="toCenterBreAuditQuery"/>
+	   <!-- 分页查询申诉信息 -->
+	   <action name="toCenterBreAuditDetail" class="centerBreAuditAction" method="toCenterBreAuditDetail"/>
+	   <!-- 跳转审批通过 -->
+	   <action name="toBreAuditPass" class="centerBreAuditAction" method="toBreAuditPass"/>
+	   <!-- 审批通过 -->
+	   <action name="breAuditPass" class="centerBreAuditAction" method="breAuditPass"/>
+	   <!-- 跳转审批不通过 -->
+	   <action name="toBreAuditNotPass" class="centerBreAuditAction" method="toBreAuditNotPass"/>
+	   <!-- 审批不通过 -->
+	   <action name="breAuditNotPass" class="centerBreAuditAction" method="breAuditNotPass"/>
+	  
+	</package>
+</struts>

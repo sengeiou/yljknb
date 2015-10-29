@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/k6/f10603003" extends="shyb-default" namespace="/k6/f10603003">
+		<action name="index" class="linkAction">
+			<result name="success">/pages/k6/f10603003/f10603003.jsp
+			</result>
+		</action>
+		<action name="queryMediPartFee" class="mediPartFeePercAction"
+			method="queryMediPartFee"></action>
+		<action name="queryDisease" class="mediPartFeePercAction"
+			method="queryDisease"></action>
+		<action name="queryMedical" class="mediPartFeePercAction"
+			method="queryMedical"></action>
+		<action name="queryIdentify" class="mediPartFeePercAction"
+			method="queryIdentify"></action>
+	</package>
+</struts>

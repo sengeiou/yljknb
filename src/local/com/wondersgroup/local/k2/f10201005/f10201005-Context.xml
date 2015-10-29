@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10201005 Context</description>
+
+	<bean id="medDeductPlanOperateAction"
+		class="com.wondersgroup.local.k2.f10201005.action.MedDeductPlanOperateAction"
+		scope="prototype">
+		<description>扣款计划操作Action</description>
+		<property name="f10201005VS" ref="f10201005VS"></property>
+	</bean>
+
+
+	<bean id="f10201005VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k2.f10201005.vs.impl.F10201005VSImpl">
+				<property name="medAuditBS" ref="medAuditBS"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- 分析报告参保人  -->
+	<include file="com/wondersgroup/local/report/geren/geren-Action.xml"/>
+	<!-- 分析报告医疗机构  -->
+	<include file="com/wondersgroup/local/report/yiyuan/yiyuan-Action.xml"/> 
+	<!-- 分析报告医师  -->
+	<include file="com/wondersgroup/local/report/yishi/yishi-Action.xml"/>
+</struts>
+

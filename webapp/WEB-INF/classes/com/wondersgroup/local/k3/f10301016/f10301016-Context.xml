@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>f10301016 Context</description>
+	
+	<bean id="f10301016Action" class="com.wondersgroup.local.k3.f10301016.action.F10301016Action" scope="prototype">
+		  <description>查询笔录信息</description>
+		  <property name="f10301016VS" ref="f10301016VS"></property>
+	</bean>
+	
+	<bean id="saveInquiryAction" class="com.wondersgroup.local.k3.f10301016.action.SaveInquiryAction" scope="prototype">
+		<description>保存询问信息</description>
+		<property name="f10301016VS" ref="f10301016VS"></property>
+	</bean>
+	
+	<bean id="loadInquiryAction" class="com.wondersgroup.local.k3.f10301016.action.LoadInquiryAction" scope="prototype">
+		<description>修改询问笔录</description>
+		<property name="f10301016VS" ref="f10301016VS"></property>
+	</bean>
+	
+	<bean id="deleteInquiryAction" class="com.wondersgroup.local.k3.f10301016.action.DeleteInquiryAction" scope="prototype">
+		<description>删除询问笔录</description>
+		<property name="f10301016VS" ref="f10301016VS"></property>
+	</bean>
+	
+	<bean id="exportWord_BL" class="com.wondersgroup.local.k3.f10301016.action.ExportWordBL" scope="prototype">
+		<description>导出询问笔录</description>
+		<property name="f10301016vs" ref="f10301016VS"></property>
+	</bean>
+	
+	<bean id="downloadAction" class="com.wondersgroup.local.k3.f10301016.action.DownloadAction" scope="prototype">
+		<description>笔录下载</description>
+		<property name="f10301016VS" ref="f10301016VS"></property>
+	</bean>
+	
+	<bean id="f10301016VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301016.vs.impl.F10301016VSImpl">
+				<property name="f10301016BS" ref="f10301016BS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

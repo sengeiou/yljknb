@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<package name="/k5/f10502004" extends="shyb-default" namespace="/k5/f10502004">
+	<!-- 审核通过-->
+    <action name="auditPassHosp" class="auditPassHospAction"></action>
+    <!-- 医疗机构审核通过-->
+	<action name="auditPassyy" class="auditPassHospAction" method="auditPassyy"></action>
+	<!-- 医疗机构审核不通过-->
+	<action name="auditNotPassyy" class="auditPassHospAction" method="auditNotPassyy"></action>
+	<!-- 科室审核通过-->
+	<action name="auditPassks" class="auditPassHospAction" method="auditPassks"></action>
+	<!-- 科室审核不通过-->
+	<action name="auditNotPassks" class="auditPassHospAction" method="auditNotPassks"></action>
+    <!-- 医师审核通过-->
+	<action name="auditPassys" class="auditPassHospAction" method="auditPassys"></action>
+	<!-- 医师审核不通过-->
+	<action name="auditNotPassys" class="auditPassHospAction" method="auditNotPassys"></action>
+</package>				
+  
+</struts>

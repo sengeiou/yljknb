@@ -1,0 +1,12 @@
+#Thu Jan 29 17:00:45 CST 2015
+eclipse.preferences.version=1
+encoding//src/wssip/com/wondersgroup/wssip=UTF-8
+encoding//src/wssip/com/wondersgroup/wssip/application/LoginConstants.java=UTF-8
+encoding//src/wssip/com/wondersgroup/wssip/application/login/LoginAction.java=UTF-8
+encoding//src/wssip/com/wondersgroup/wssip/application/workspace/AbstractWorkspaceAction.java=UTF-8
+encoding//src/wssip/com/wondersgroup/wssip/application/workspace/NavigationAction.java=UTF-8
+encoding//src/wssip/com/wondersgroup/wssip/commons=UTF-8
+encoding//src/wssip/com/wondersgroup/wssip/local/application/workspace/WorkspaceAction.java=UTF-8
+encoding//src/wssip/com/wondersgroup/wssip/local/commons/util/RmbUtil.java=UTF-8
+encoding//src/wssip/com/wondersgroup/wssip/util=UTF-8
+encoding/<project>=UTF-8

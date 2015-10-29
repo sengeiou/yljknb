@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k2/f10201002"  extends="shyb-default" namespace="/k2/f10201002">
+		
+	   <action name="index" class="linkAction">
+			<result name="success">/pages/k2/f10201002/f10201002.jsp</result>
+	   </action>
+	   
+	   <!-- 单据初审操作action -->
+	   <action name="medDocumentOperate" class="medDocumentOperateAction" />
+	   
+	   <!-- 分页查询违规单据统计信息 -->
+	   <action name="queryMedDocument" class="medDocumentOperateAction" method="queryMedDocument"/>
+	   
+	   <!-- 分页查询单据违规信息 -->
+	   <action name="queryMedDocumentIllegal" class="medDocumentOperateAction" method="queryMedDocumentIllegal"/>
+	   
+	   <!-- 就诊信息查询 -->
+	   <action name="queryMedVisitInfo" class="medDocumentOperateAction" method="queryMedVisitInfo"/>
+	   
+	   <!-- 单据明细初审操作action -->
+	   <action name="medDocumentDetailOperate" class="medDocumentDetailOperateAction" />
+	   
+	   <!-- 分页查询违规单据明细统计信息 -->
+	   <action name="queryMedDocumentDetail" class="medDocumentDetailOperateAction" method="queryMedDocumentDetail"/>
+	   
+	   <!-- 分页查询单据明细违规信息 -->
+	   <action name="queryMedDocumentDetailIllegal" class="medDocumentDetailOperateAction" method="queryMedDocumentDetailIllegal"/>
+	   
+	   <!-- 查询单据明细审核信息 -->
+	   <action name="queryCheckRecord" class="medDocumentDetailOperateAction" method="queryCheckRecord"/>
+	   
+	</package>
+</struts>

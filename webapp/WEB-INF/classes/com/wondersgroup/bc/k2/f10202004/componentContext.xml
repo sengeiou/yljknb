@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<description>综合查询-审核查询</description>	
+	
+	<bean id="f10202004BS"
+		class="com.wondersgroup.bc.k2.f10202004.bs.impl.F10202004BSImpl">
+	</bean>
+</beans>

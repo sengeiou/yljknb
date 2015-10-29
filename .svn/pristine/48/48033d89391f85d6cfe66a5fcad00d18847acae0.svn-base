@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<description>
+		Spring Configuration of CAYTH Business Platform.
+	</description>
+	<bean id="linkAction" class="com.opensymphony.xwork2.ActionSupport"></bean>
+	<!-- Bean定义 -->
+	<import resource="com/wondersgroup/wssip/local/application/localAppContext.xml" />
+	<import	resource="com/wondersgroup/wssip/local/commons/commons-Context.xml" />
+
+	<import resource="com/wondersgroup/mycommon/mycommonContext.xml"/>
+	<!-- 公共方法 -->
+    <import resource="com/wondersgroup/local/common/common-Context.xml"/>
+    <!-- 医保费用审核 -->
+    <import resource="com/wondersgroup/local/k2/k2-Context.xml"/>
+    <!-- 规则知识库管理 -->
+    <import resource="com/wondersgroup/local/k4/k4-Context.xml"/>
+    <!-- 业务协同平台 -->
+    <import resource="com/wondersgroup/local/k5/k5-Context.xml"/>
+    <!-- 分析报告-->
+    <import resource="com/wondersgroup/local/report/report-Context.xml"/>
+    <!-- 统计分析 -->
+    <import resource="com/wondersgroup/local/k6/k6-Context.xml"/>
+     <!-- 稽核 -->
+    <import resource="com/wondersgroup/local/k3/k3-Context.xml"/>
+</beans>

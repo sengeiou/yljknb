@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<description>f10301009 Context</description>
+	
+	<bean id="queryCaseTransTurnAction"
+		  class="com.wondersgroup.local.k3.f10301009.action.QueryCaseTransTurnAction"
+		  singleton="false">
+		  <description>查询转办案件</description>
+		  <property name="f10301009VS" ref="f10301009VS"></property>
+	</bean>
+	
+	<bean id="saveTurnMessageAction"
+		  class="com.wondersgroup.local.k3.f10301009.action.SaveTurnMessageAction"
+		  singleton="false">
+		  <description>保存移交信息</description>
+		  <property name="f10301009VS" ref="f10301009VS"></property>
+	</bean>
+	
+	<bean id="f10301009VS" parent="basicTxProxy">
+		<property name="target">
+			<bean class="com.wondersgroup.local.k3.f10301009.vs.impl.F10301009VSImpl">
+				<property name="adminDisposalBS" ref="adminDisposalBS"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

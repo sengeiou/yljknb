@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k4/f10402003" extends="shyb-default" namespace="/k4/f10402003">
+	
+		<!-- 分页查询规则 -->
+		<action name="queryAnalysisRule" class="queryAnalysisRuleAction"/>
+		
+		<!-- 页面初始值 -->
+		<action name="initAnalysisRule" class="initAnalysisRuleAction"/>
+		
+		<!-- 保存查询规则 -->
+		<action name="saveAnalysisRule" class="saveAnalysisRuleAction"/>
+		
+		<!-- 加载单个查询规则 -->
+		<action name="loadAnalysisRule" class="loadAnalysisRuleAction"/>
+		
+		<!-- 更新查询规则 -->
+		<action name="updateAnalysisRule" class="updateAnalysisRuleAction"/>
+		
+		<!-- 更新查询规则统计期别 -->
+		<action name="updateAnalysisRuleAae043" class="updateAnalysisRuleAae043Action"/>
+		
+		<!-- 更新查询规则统计期别 -->
+		<action name="updateAnalysisRuleAae100" class="updateAnalysisRuleAae100Action"/>
+		
+	</package>		  
+</struts>

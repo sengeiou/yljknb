@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="/k2/f10204002" extends="shyb-default" namespace="/k2/f10204002">
+
+		<action name="index" class="linkAction">
+			<result name="success">/pages/k2/f10204002/f10204002.jsp</result>
+		</action>
+
+		<!-- 分页查询违规单据统计信息 -->
+		<action name="queryMedDocument" class="f10204002Action" method="queryMedDocument" />
+
+		<!-- 分页查询违规单据明细统计信息 -->
+		<action name="queryMedDocumentDetail" class="f10204002Action"
+			method="queryMedDocumentDetail"></action>
+
+		<!-- 查询单据明细违规信息 -->
+		<action name="queryMedDocumentDetailIllegal" class="f10204002DetailAction"
+			method="queryMedDocumentDetailIllegal" />
+
+		<!-- 单据明细主动复议action——批量主动复议 -->
+		<action name="preCheckBatch" class="f10204002DetailAction"></action>
+
+		<!-- 单据明细主动复议action——单个主动复议 -->
+		<action name="preCheckSingle" class="f10204002DetailAction"
+			method="preCheckSingle"></action>
+		
+		<!-- 主动复议医院汇总 -->
+		<action name="searchWithHospital" class="f10204002Action"
+			method="searchWithHospital"></action>	
+			
+		<!-- 上传附件 -->
+		<action name="uploadFile" class="uploadAction"></action>
+
+	</package>
+</struts>
